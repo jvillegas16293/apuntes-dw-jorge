@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex direction</title>
 
     <style>
-        .box{
+        .box {
             width: 100px;
             height: 100px;
             padding: 5px;
@@ -14,7 +15,7 @@
 
             background-color: red;
             border: 4px solid black;
-            box-shadow:  inset 10px 10px 10px rgb(235, 200, 120);
+            box-shadow: inset 10px 10px 10px rgb(235, 200, 120);
             border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
 
@@ -24,95 +25,161 @@
             align-items: center;
         }
 
-        .boxDouble{
-                width: 200px;
-            }
+        .boxDouble {
+            width: 200px;
+        }
 
-        .purplebox{
+        .purplebox {
             background: purple;
             padding: 5px;
             height: 200px;
         }
 
-        .flexx{
+        .flexx {
             /* propiedades de flex */
             display: flex;
             gap: 4px;
 
             font-size: x-large;
             font-weight: bold;
-            filter: drop-shadow(2px 2px 2px rgba (0, 0, 0, 0,5) );
+            filter: drop-shadow(2px 2px 2px rgba (0, 0, 0, 0, 5));
             height: 300px;
 
         }
 
-        .ej1{
+        .ej1 {
             flex-direction: row;
+            /*  `pone los elementos en fila */
             flex-direction: column;
-            flex-direction:  row-reverse;
+            /*  pone los elementos en columna */
+            flex-direction: row-reverse;
+            /*  pone los elementos en fila, pero en orden inverso */
             flex-direction: column-reverse;
+            /*  pone los elementos en columna, pero en orden inverso */
         }
 
-        .ej2{
+        .ej2 {
             flex-direction: row;
+            /*  `pone los elementos en fila */
             flex-wrap: wrap;
+            /*  pone los elementos en fila, pero si no caben, los pone en la siguiente fila */
             flex-wrap: wrap-reverse;
+            /*  pone los elementos en fila, pero si no caben, los pone en la siguiente fila, pero en orden inverso */
 
             flex-flow: row wrap;
-        }
+            flex-grow: 1; /*expandirá automáticamente para llenar todo el espacio  */      
+          }
 
-        .ej3{
+        .ej3 {
             flex-direction: column;
+            /*  `pone los elementos en columna */
             height: 500px;
+
+            /* siempre para el eje pricipal */
             justify-content: flex-start;
+            /* pone los elementos al principio */
             justify-content: flex-end;
+            /* pone los elementos al final */
             justify-content: center;
+            /* pone los elementos en el centro */
 
-            justify-content: space-evenly; /* distribuye los elementos con la separación por igual */
-            justify-content: space-between; /* Separa los elementos lo máximo posible */
-            justify-content: space-around; /* Distribuye un poco separado, pero en las laterals dja exactamente la mitar del espacio centrar */
-
+            justify-content: space-evenly;
+            /* distribuye los elementos con la separación por igual */
+            justify-content: space-between;
+            /* Separa los elementos lo máximo posible */
+            justify-content: space-around;
+            /* Distribuye un poco separado, pero en las laterals dja exactamente la mitar del espacio centrar */
 
         }
 
+        .ej4 {
+            align-items: flex-start;
+            align-items: center;
+            align-items: flex-end;
+        }
+
+        .ej5 {
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
     </style>
 </head>
+
 <body>
 
-        <h3>Flex direction</h3>
-        <p>Dirección y selección del eje PRINCPAL de nuestros elementos hijos. Opciones de row, colum, row-reverse y colum-reverse</p>
+    <h3>Flex direction</h3>
+    <p>Dirección y selección del eje PRINCPAL de nuestros elementos hijos. Opciones de row, colum, row-reverse y
+        colum-reverse</p>
 
-        <div class="flexx ej1 purplebox">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-        </div>
-    
-        <h3>Flex Wrap</h3>
-        <p>Controla si los elementos se ajustan a la misma fila o se desplaza a la siguiente. Conserva el width y height de los elementos, y las opciones posbles son: nowrap, wrap, wrap-reverse</p>
-        <p> Podemos utilizar flex-flow: row wrap para combinar elementos (flex-direction - wrap)</p>
-        <div class="flexx ej2">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box boxDouble">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-        </div>  
-        
-        <h3>Justify content</h3>
-        <div class="flexx ej3">
-            <div class="box boxDouble">1 d</div>
-            <div class="box">2</div>
-            <div class="box boxDouble">3 d</div>
-        </div>  
+    <div class="flexx ej1 purplebox">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
 
-        <h3>Align items</h3>
-        <h3>order</h3>
-        <h3>flex-row</h3>
+    <h3>Flex Wrap</h3>
+    <p>Controla si los elementos se ajustan a la misma fila o se desplaza a la siguiente. Conserva el width y height de
+        los elementos, y las opciones posbles son: nowrap, wrap, wrap-reverse</p>
+    <p> Podemos utilizar flex-flow: row wrap para combinar elementos (flex-direction - wrap)</p>
+    <div class="flexx ej2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box boxDouble">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <h3>Justify content</h3>
+    <div class="flexx ej3">
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble">3 d</div>
+    </div>
+
+    <h3>Align items</h3>
+    /* Se utiliza para el eje secundatrio siempre, si estamos en fila el eje principal es el horizontal, si estamos en
+    columna el eje principal es el vertical */
+
+    <div class="flexx ej4">
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble">3 d</div>
+    </div>
+
+
+
+    <h3>order</h3>
+
+    Ordena un elemento individual respectoa los otros elementos. Por defecto, los elementos tienen un valor de 0,
+    nosotros podemos usar este elementos para establecerlo a un número positivo a negativo.
+
+    <div class="flexx ej4">
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble">3 d</div>
+    </div>
+
+
+
+
+    <h3>flex-row</h3>
+
+    controla cuanto crecera el elemento en el eje principal. Por defecto, todos los elementos tienen un valor de 0,
+    nosotros podemos usar este elemento para establecerlo a un número positivo a negativo.
+
+    <div class="flexx ej5">
+        <div class="flex-grow: 0" class="box">1 d</div>
+        <div class="flex-grow: 0" class="box">2</div>
+        <div class="flex-grow: 1" class="box">3 d</div>
+    </div>
+
+
+
 
 </body>
+
 </html>

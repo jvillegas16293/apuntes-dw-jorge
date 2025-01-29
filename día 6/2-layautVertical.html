@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layaut Vertical</title>
+</head>
+
+<style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: thistle;
+        height: 100vh;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .header,
+    .footer {
+        background-color: beige;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        /* Contenido centrado en div */
+        background-color: teal;
+        padding: 10px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        /* Para mejor contraste */
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">Contenido</div>
+        <div class="footer">Pie</div>
+    </div>
+
+</body>
+
+</html>

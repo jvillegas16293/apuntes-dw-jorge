@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layaut Horizontal</title>
+</head>
+
+<style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Estilos de mi App */
+
+    .container {
+        display: flex;
+        background-color: teal;
+        height: 100vh;
+        /*view height es el alto de la vista, se ajusta al tamaño de la pantalla, en este caso al 100%, pero podia poner otro % como 60%*/
+    }
+
+    .sidebar {
+        background-color: beige;
+        width: 250px;
+        /*ancho de la barra lateral*/
+        padding: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        /* quita el formato a mi lista "li" */
+
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: black
+    }
+
+    .sidebar ul li a:hover {
+        color: aqua;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <!--ul>li*3{Elemento $}+li>a[href="./index.html"]{Home}
+
+        > nos metemos dentro de la etiqueta
+        * multiplica los elementos
+        {} escriben texto
+        {$} agregar un número a cada item
+        + agregar una etiqueta hermana
+        [] acceden a los atributos
+        -->
+
+    <div class="container">
+        <div class="sidebar">
+
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li><a href="./index.html">home</a></li>
+            </ul>
+        </div>
+
+        <!--shortcut en emmet
+    div.main-content>h1{contenido pricipal}+p{lorem}
+    -->
+
+        <div class="main-content">
+            <h1>CONTENIDO PRINCIPAL</h1>
+            <p>les simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
+                relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se
+                dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer
+                un libro de textos especimen. No só</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
