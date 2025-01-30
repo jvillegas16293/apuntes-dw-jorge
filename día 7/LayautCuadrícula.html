@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layaut Cuadrícula</title>
+</head>
+
+<style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .grid-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        background-color: gray;
+        color: white;
+        padding: 20px;
+
+        flex-grow: 1; /* permite el box crecer*/
+        flex-shrink: 0; /*permite al box achicarse*/
+        flex-basis: 200px; /* valor inicial de nuestro elemento, se pueden agrandar pero no pueden ser mas pequeñas de 200px*/
+
+        flex: 1 0 200px; /* es lo mismo que las 3 propiedades anteriores*/
+
+    }
+    
+
+</style>
+
+<body>
+
+    <div class="grid-container">
+        <!--div.card*6>{tarjeta $}-->
+        <div class="card">tarjeta 1</div>
+        <div class="card">tarjet 2</div>
+        <div class="card">tarjeta 3</div>
+        <div class="card">tarjeta 4</div>
+        <div class="card">tarjeta 5</div>
+        <div class="card">tarjeta 6</div>
+    </div>
+
+</body>
+
+</html>
