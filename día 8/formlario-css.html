@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            max-width: 900px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+        }
+
+        /* Estilos para los inputs y labels */
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 5px;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        /* Estilos para radio y checkbox */
+        .opciones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        /* Estilos del botón */
+        input[type="submit"] {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form action="a donde envio la información (url)" method="get">
+            <label for="txt-usuario">Usuario</label>
+            <input type="text" id="txt-usuario" name="text-usuario" placeholder="Tu usuario">
+
+            <label for="txt-email">Email</label>
+            <input type="email" id="txt-email" name="text-email" placeholder="Tu correo">
+
+            <label for="txt-clave">Clave</label>
+            <input type="password" id="txt-clave" name="text-clave" placeholder="Tu clave (8 caracteres)">
+
+            <label for="txt-info">Mensaje</label>
+            <textarea name="txt-info" id="txt-info" placeholder="Escribe tu mensaje"></textarea>
+
+            <label>Edad:</label>
+            <div class="opciones">
+                <label><input type="radio" name="rd-edad" value="mayor" checked> Mayor de 18</label>
+                <label><input type="radio" name="rd-edad" value="menor"> Menor de 18</label>
+                <label><input type="radio" name="rd-edad" value="no-contesta"> Prefiero no decir</label>
+            </div>
+
+            <label>Hobbies:</label>
+            <div class="opciones">
+                <label><input type="checkbox" name="chk-futbol" value="Futbol" checked> Fútbol</label>
+                <label><input type="checkbox" name="chk-volley" value="volley" checked> Vóley</label>
+                <label><input type="checkbox" name="chk-tenis" value="tenis"> Tenis</label>
+            </div>
+
+            <label for="select-puesto">Puesto</label>
+            <select name="select-puesto" id="select-puesto">
+                <option value="1">Frontend</option>
+                <option selected value="2">Backend</option>
+                <option value="3">Fullstack</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+
+</html>
