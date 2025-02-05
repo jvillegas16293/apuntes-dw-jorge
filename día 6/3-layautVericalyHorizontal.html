@@ -13,12 +13,14 @@
             box-sizing: border-box;
         }
 
+        /* Contenedor principal que ocupa toda la pantalla */
         .container {
             display: flex;
-            height: 100vh;
             flex-direction: column;
+            height: 100vh;
         }
 
+        /* Menú superior */
         .menu {
             background-color: #333;
             color: white;
@@ -39,11 +41,20 @@
             text-decoration: none;
         }
 
+        /* Header */
+        .header {
+            background-color: beige;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Contenido principal que crece */
         .container-content {
             display: flex;
             flex-grow: 1;
         }
 
+        /* Sidebar */
         .sidebar {
             background-color: beige;
             width: 250px;
@@ -63,19 +74,11 @@
             color: aqua;
         }
 
+        /* Contenido central */
         .main-content {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-        }
-
-        .header,
-        .footer {
-            background-color: beige;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .content {
@@ -88,6 +91,13 @@
             color: white;
             font-size: 24px;
             font-weight: bold;
+        }
+
+        /* Footer fijo abajo */
+        .footer {
+            background-color: beige;
+            padding: 10px;
+            text-align: center;
         }
 
         /* Diseño responsive */
@@ -105,29 +115,36 @@
 </head>
 
 <body>
-    <div class="menu">
-        <div class="logo">LOGO</div>
-        <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </div>
-    <div class="container-content">
-        <div class="sidebar">
+    <div class="container">
+        <div class="menu">
+            <div class="logo">LOGO</div>
             <ul>
-                <li>Elemento 1</li>
-                <li>Elemento 2</li>
-                <li>Elemento 3</li>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </div>
-        <div class="main-content">
-            <div class="header">Header</div>
-            <div class="content">Contenido Principal</div>
-            <div class="footer">Pie</div>
+
+        <!-- Header arriba -->
+        <div class="header">Header</div>
+
+        <div class="container-content">
+            <div class="sidebar">
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="content">Contenido Principal</div>
+            </div>
         </div>
+
+        <!-- Footer abajo -->
+        <div class="footer">Pie</div>
     </div>
 </body>
 

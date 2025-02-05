@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+
+            display: flex;
+            margin-top: 50px;
+            height: 300px;
+            width: 400px;
+            border: 5px;
+            solid -ms-grid-layer: ;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: seashell;
+            border: 1px solid black;
+            padding: 16;
+        }
+
+        .yellow {
+
+            background-color: yellow;
+            top: 20px;
+            left: 20px;
+
+        }
+
+        /* Etilos adicionales de posiciones*/
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <!--STATIC No se aplica ninguna propiedad de posicion y se muestra en el flujo  nromal del documento-->
+
+    <div claa="container">
+        <div class="box">1</div>
+        <div class="box yellow static">Static</div>
+        <div class="box">3</div>
+    </div>
+
+    <!--Relative: Afecta a las posicoines top, right, bottom y ademas deja el espacio-->
+
+    <div claa="container">
+        <div class="box">1</div>
+        <div class="box yellow relative">Relative</div>
+        <div class="box">3</div>
+    </div>
+
+    <!--Asolute: Funcionan las posiciones, si ocupa el espacio. Se posiciona con respecto al padre mas cercado que tenfga una propiedad de posición diferente a static (normalmente relativa). S0ino en cunetra una utiliza el body -->
+
+    <div claa="container relative">
+        <div class="box">1</div>
+        <div class="box yellow absolute">Absolute</div>
+        <div class="box">3</div>
+    </div>
+
+    <!--FIXED:Afecta las positions top, left, right. 
+    Bottom. 
+    No ocupa espacio. Se posiciona respecto a la ventana del avegador. 
+    Se mantien fijo en la pantalla-->
+
+    <div class="container">
+        <div class="box" style="margin-top: 100px;">1</div>
+        <div class="box yellow fixed">Fixed</div>
+        <div class="box">3</div>
+    </div>
+    <!--STICKY: 
+Comportamiento de una cominacion entre relative y fixed
+utiliza top o left como punto de adhesion
+se posiiona con respeto a la ventana del navegador (viewport)
+se queda fijo en la pantalla (fixed), hasta que el elemento padre se acaba-->
+
+    <div class="container>2</div>
+    <div class="box">1</div>
+    <div class="box yellow sticky">Sticky</div>
+    <div class="box">3</div>
+    </div>
+
+
+
+
+</body>
+
+</html>
