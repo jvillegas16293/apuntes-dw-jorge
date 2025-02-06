@@ -5,8 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+
     <style>
         .header {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+            box-sizing: border-box;
+            padding: 20px;
+
+
+            /* para centrar el elemento */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* FINAL HEADER */
+
+
+        /* Para organizar el layout */
+        .main-container {
+            display: flex;
+        }
+
+        .body {
+            background-color: rgb(188, 152, 122);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px
+        }
+
+
+
+        .sidebar {
+            flex-wrap: 1;
+            background-color: lightgray;
+            width: 100px;
+            padding: 200px;
+            gap: 20px;
+            text-align: center;
             background-color: #1EAAFC;
             background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -18,41 +64,60 @@
             align-items: center;
             font-size: 18px;
             font-weight: bold;
-            box-sizing: border-box;
-            padding: 20px;
-        }
-        /* FINAL HEADER */
-        
-
-        /* Para organizar el layout */
-        .main-container {
-            display: flex;
         }
 
         .content-container {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            padding: 50px;
+            gap: 20px;
+
         }
 
-
-
-        .sidebar {
-            background-color: lightgray;
-            width: 200px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .item__content1,
-        .item__content2 {
+        .item__content1 {
             background-color: beige;
-            width: 400px;
-            padding: 20px;
-            margin-bottom: 10px;
             text-align: center;
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
         }
+
+        .item__contents {
+
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .item__content2 {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+            box-sizing: border-box;
+            height: 200px;
+            flex-grow: 1;
+
+            /* para centrar el elemento */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
 
 
         /*INICIO FOTOTER*/
@@ -71,10 +136,25 @@
             margin-top: auto;
             padding: 20px;
         }
+
+        .whassapp{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: aliceblue;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+        }
+
+        .whassapp i {
+            font-size: 48x;
+        }
+
     </style>
 </head>
 
-<body>
+<body class="body">
 
     <div class="header">Header</div>
 
@@ -86,14 +166,41 @@
         <div class="content-container">
 
             <div class="item__content1">Content-1</div>
-            <div class="item__content2">Content-2</div>
-            <div class="item__content2">Content-3</div>
+
+            <div class="item__contents">
+                <div class="item__content2">Content-2</div>
+                <div class="item__content2">Content-3</div>
+            </div>
+
 
         </div>
 
     </div>
 
-    <div class="footer">Footer</div>
+    <div class="footer">Footer
+
+        <div class="whatsaap">
+         <i   class="fa fa_home"></i>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        // aqui podemos escribir JavaScript //
+
+        // 1 - Selecionar la caja .content
+        let contenedor = document.querySelector{".content-container"}
+
+        const miHTML =  <div class="item__contents">
+                <div class="item__content2">Content-2</div>
+                <div class="item__content2">Content-3</div>
+            </div>
+
+            contenemos.innemHTML = miHTML
+         
+    </script>
 
 </body>
 
