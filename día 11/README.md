@@ -19,7 +19,7 @@ Se compone de las siguientes partes:
 
 /* keyword  MediaType, Operadores/es breakpoint {reglas de CSS} */
 
-@meida not|only|notonly sceen and {min-widht 600px} {
+@meida not|only|notonly screen and {min-widht 600px} {
 
 body {
 

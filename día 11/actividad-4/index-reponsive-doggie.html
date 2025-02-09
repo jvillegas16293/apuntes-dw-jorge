@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Doggie</title>
+
+    <link type="text/css" rel="stylesheet" href="./css/estilos-queries.css" />
+    <link type="text/css" rel="stylesheet" href="./css/reset.css" />
+
+   
+</head>
+
+<body class="body">
+
+    <div class="container">
+
+        <div class="header box">Responsive Doggie</div>
+
+        <div class="container__content">
+
+            <h1 class="container__tittle">Doggie</h1>
+            <picture>
+                <source media="(min-width: 1280px)"
+                    srcset="./img/portatil.jpg">
+                <source media="(min-width: 450px)"
+                    srcset="./img/tablet.jpg">
+                <img src="./img/movil.jpg"
+                    alt="Gatito tierno">
+            </picture>
+
+        </div>
+
+        <div class="footer box box--footer">Footer</div>
+
+    </div>
+
+    <script>
+
+        window.addEventListener("resize", function () {
+            changeTitle();
+        });
+
+        window.addEventListener("load", function () {
+            changeTitle();  // También lo hacemos al cargar la página
+        });
+
+        function changeTitle() {
+            const title = document.querySelector(".container__tittle");
+
+            // Condiciones para cambiar el texto según el tamaño de la pantalla
+            if (window.innerWidth <= 488) {
+                title.textContent = "Doggie - Versión móvil";  // Para móviles
+            } else if (window.innerWidth <= 1884) {
+                title.textContent = "Doggie - Versión tablet";  // Para tablets
+            } else {
+                title.textContent = "Doggie - Versión escritorio";  // Para escritorio
+            }
+        }
+    </script>
+
+</body>
+
+</html>
