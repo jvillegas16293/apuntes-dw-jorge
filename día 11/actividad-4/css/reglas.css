@@ -1,0 +1,71 @@
+.header {
+    height: 100px;
+
+    position: sticky;
+    top: 0;
+}
+
+
+.footer {
+    height: 100px;
+
+}
+
+.box {
+
+    background-color: #eba56d;
+    box-shadow: 0 10px 20px rgba(247, 157, 83, 0.19), 0 6px 6px rgba(245, 162, 54, 0.23);
+    font-size: 30px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box--footer {
+
+    background-color: #703717;
+    color: aliceblue;
+
+}
+
+/* FINAL DEL HEADER Y FOOTER */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos en columna */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    flex-grow: 1;
+    /* Permite que el contenedor ocupe el espacio disponible */
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+}
+
+.container__tittle {
+    font-size: 50px;
+    margin-top: 20px;
+    /* Separación del header */
+    margin-bottom: 20px;
+    /* Separación de la imagen */
+}
+
+.container__img {
+    margin-top: 20px;
+    /* Separación del header */
+    margin-bottom: 20px;
+    /* Separación de la imagen */
+    height: auto;
+}
+
+
