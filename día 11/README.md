@@ -60,7 +60,7 @@ Apartir de estas dimensiones
 
 ...CSS
 
-/* Mobile First */
+/* Mobile First */ ***SI DISEÑAMOS PARA MOVIL, LAS REGLAS POR DEFECTO SON PARA MÓVILES, POR LO TANTO, SOLO TENDREMOS 2 MEDIA QUERIRES, PARA TABLETS Y ESCRITOIO***
 
 - tablet
 
