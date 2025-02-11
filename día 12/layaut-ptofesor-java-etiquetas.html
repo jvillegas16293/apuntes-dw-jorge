@@ -125,53 +125,63 @@ layout con FontAwesome, Sticky, Static
         }
 
         .whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background-color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .whatsapp__link {}
+
 
         .whatsapp i {
-            font-size: 48px;
-            color: green;
-            margin-top: -3px;
-            margin-left: -1px;
-
-        }
+    font-size: 36px;
+    color: green;
+}
     </style>
 </head>
 
 <body class="body">
 
-    <div class="header box">Header</div>
+    <header class="header box">Header</header>
 
     <!-- main -->
-    <div class="main">
+    <main class="main">
 
-        <div class="sidebar box">sidebar</div>
+        <aside class="sidebar box">sidebar</aside>
 
         <!-- content -->
-        <div class="content">
+        <article class="content">
 
             <!-- hero -->
             <div class="content__item content__item--hero box">content-1</div>
+            <section>
+                <!-- seccion promociones -->
+                <div class="content__row">
+                    <div class="content__item box">content-2</div>
+                    <div class="content__item box">content-3</div>
+                </div>
+            </section>
 
-            <!-- fila 1 de varias -->
-            <div class="content__row">
-                <div class="content__item box">content-2</div>
-                <div class="content__item box">content-3</div>
-            </div>
+            <section>
+                <!-- seccion productos  -->
+                <div class="content__row">
+                    <div class="content__item box">content-2</div>
+                    <div class="content__item box">content-3</div>
+                </div>
+            </section>
+
 
             <!-- Me gustaría agregar elementos con JS -->
-        </div>
+        </article>
 
-    </div>
-    <div class="footer box">Footer</div>
+    </main>
+    <footer class="footer box">Footer</footer>
 
 
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaguetti Carbonara</title>
+<
+    <link type="text/css" rel="stylesheet" href="./css/reglas.css" />
+    <link type="text/css" rel="stylesheet" href="./css/reset.css" />
+
+
+    <style>
+       .body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 202, 153);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  height: 10vh;
+  background-color: rgb(243, 194, 130);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.header__logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.header__buscador {
+  width: 400px;
+  height: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: solid 1px gray;
+  border-radius: 30px;
+}
+
+.menu__servicios {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.main__article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 60%;
+}
+
+.content__row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.main__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+
+.main__section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+  width: 100%;
+  background-color: rgb(240, 202, 153); /* Color de fondo */
+}
+
+.main__title {
+  font-size: 4rem; /* Tamaño grande */
+  font-weight: bold;
+  text-align: center;
+}
+
+
+aside {
+  width: 20%;
+  padding-left: 20px;
+} 
+    </style>
+</head>
+
+<body class="body">
+    <div class="header">
+        <div class="header__logo">
+            <a href="/index.html"><img src="./img/BN.png" alt="logo_imagen"></a>
+        </div>
+
+        <input type="text" placeholder="Buscar..." class="header__buscador">
+
+        <div class="header__menu">
+            <ul class="menu__servicios">
+                <li>Todas las recetas</li>
+                <li>Mis recetas</li>
+                <li>Mi cuenta</li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="hero">
+            <h1 class="main__title">Spaguetti a la Carbonara</h1>
+        </section>
+        <article class="main__article">
+            <div class="content">
+                <section>
+                    <h2>Gennaro Contaldo</h2>
+                </section>
+                <section>
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        <li>200 g de espaguetis</li>
+                        <li>100 g de guanciale</li>
+                        <li>2 yemas de huevo + 1 huevo entero</li>
+                        <li>50 g de queso Pecorino Romano rallado</li>
+                        <li>Pimienta negra recién molida al gusto</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Paso a paso</h2>
+                    <ol>
+                        <li>Corta el guanciale en tiras pequeñas y fríelo hasta que quede crujiente.</li>
+                        <li>Hierve los espaguetis hasta que estén al dente y reserva un poco del agua de cocción.</li>
+                        <li>Mezcla los huevos con el queso rallado y pimienta negra.</li>
+                        <li>Combina los espaguetis con el guanciale y añade la mezcla de huevo y queso.</li>
+                        <li>Sirve caliente con más queso y pimienta al gusto.</li>
+                    </ol>
+                </section>
+            </div>
+
+            <section class="main__section">
+                <figure>
+                    <img src="https://i.postimg.cc/tJCHFcbL/carbonara.jpg" alt="receta spaguetti carbonara">
+                    <figcaption>Spaguetti Carbonara</figcaption>
+                </figure>
+            </section>
+        </article>
+
+        <aside>
+            <h2>Otras recetas que te pueden gustar</h2>
+            <section>
+                <h3>Receta 1</h3>
+                <p>Descripción de la receta 1</p>
+            </section>
+            <section>
+                <h3>Receta 2</h3>
+                <p>Descripción de la receta 2</p>
+            </section>
+            <section>
+                <h3>Receta 3</h3>
+                <p>Descripción de la receta 3</p>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="footer"></footer>
+</body>
+
+</html>
