@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Unidades de medida CSS</title>
+
+    <style>
+        /* Tamaño de fuente raíz es para REM */
+        html {
+            font-size: 16px;
+            /* valor po defecto*/
+        }
+
+        .px-box {
+            width: 200px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        /* 20em son 20 veces el tamaño de la fuente o contenedor padre */
+        .em-dox {
+            width: 20em;
+            height: 10em;
+            background-color: aquamarine;
+
+        }
+        /* 10 rem es 10 vees el tmaño de la fuente del HTML */
+        .rem-box {
+            width: 10rem;
+            height: 5rem;
+            background-color: lightgreen;
+        }
+        /*Se expande para ocupar el 50% del contenedor padre */
+        .percent-box{
+            width: 50%;
+            height: 50px;
+            background-color: blanchedalmond;
+        }
+
+        .padre{
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="padre">
+
+        <div class="px-box">Caja con medidas en px (200px 100px)</div>
+        <div class="em-box">Caja con medidas en em (200px 10px)</div>
+        <div class="rem-box">Caja con medidas en em (10px 5px)</div>
+        <div class="porcent-box">Caja con medidas en em (50% del contenedos)</div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

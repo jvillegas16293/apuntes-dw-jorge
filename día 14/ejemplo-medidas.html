@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Medidas</title>
+    
+    <style>
+        /* Tamaño de fuente raíz (para rem)*/
+
+        :root {
+            font-size: 1em; /* 1em = 16px */
+            font-size: 1rem; /* 1rem = 16px */
+            font-size: 10px; /* */
+        }
+        /* Fondo de la página */
+        body {
+            background-color: rgb(146, 144, 144);
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .main {
+            display: flex;
+            flex-direction: column; /* Alinea en columna */
+            align-items: center; /* Centra los elementos dentro */
+            padding: 20px;
+            width: 50%;
+            gap: 20px
+        }
+
+        /* Secciones */
+        .main__section {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Títulos */
+        .title {
+            margin: 0;
+            font-size: 22px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Texto */
+        .texto {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <main class="main">
+        <section class="main__section">
+            <h2 class="title">Nombre del Usuario</h2>
+            <p class="texto">DLorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+        </section>
+
+        <section class="main__section">
+            <h2 class="title">Nombre del Usuario</h2>
+            <p class="texto">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+        </section>
+    </main>
+
+</body>
+</html>
