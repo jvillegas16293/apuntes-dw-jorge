@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid de 4 Filas y 3 Columnas</title>
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .gridContainer {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(4, 100px);
+            grid-gap: 10px;
+            background-color: lightgray;
+        }
+
+        .box {
+            border: 1px solid black;
+        }
+
+        .item-1 {
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 1;
+            grid-row-end: span 1;
+            background-color: rgb(118, 236, 15);
+        }
+
+        .item-2 {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+            background-color: rgb(229, 130, 36);
+        }
+
+
+        .item-3 {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 2;
+            grid-row-end: span 3;
+            background-color: rgb(41, 68, 205);
+        }
+
+        .item-4 {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 4;
+            background-color: rgb(179, 14, 91);
+        }
+
+        .item-5 {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 4;
+            background-color: rgb(228, 14, 14);
+        }
+
+        .item-6 {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            background-color: rgb(9, 184, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridContainer">
+        <div class="item-1 box">Uno</div>
+        <div class="item-2 box">Dos</div>
+        <div class="item-3 box">Tres</div>
+        <div class="item-4 box">Cuatro</div>
+        <div class="item-5 box">Cinco</div>
+        <div class="item-6 box">Seis</div>
+    </div>
+</body>
+
+</html>
