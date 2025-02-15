@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.footer span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px; /* Separación de 20px */
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-top: 5px;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}

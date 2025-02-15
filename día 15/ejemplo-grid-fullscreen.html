@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Adaptable</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .gridContainer {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1%;
+            background-color: lightgray;
+            padding: 1%;
+        }
+
+        .box {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .item-1 {
+            grid-column: span 2;
+            grid-row: span 1;
+            background-color: rgb(118, 236, 15);
+        }
+
+        .item-2 {
+            grid-column: 3;
+            grid-row: span 2;
+            background-color: rgb(229, 130, 36);
+        }
+
+        .item-3 {
+            grid-column: 1;
+            grid-row: span 3;
+            background-color: rgb(41, 68, 205);
+        }
+
+        .item-4 {
+            grid-column: 3;
+            grid-row: 4;
+            background-color: rgb(179, 14, 91);
+        }
+
+        .item-5 {
+            grid-column: 2;
+            grid-row: 4;
+            background-color: rgb(228, 14, 14);
+        }
+
+        .item-6 {
+            grid-column: 3;
+            grid-row: 3;
+            background-color: rgb(9, 184, 238);
+        }
+    </style>
+</head>
+<body>
+    <div class="gridContainer">
+        <div class="item-1 box">Uno</div>
+        <div class="item-2 box">Dos</div>
+        <div class="item-3 box">Tres</div>
+        <div class="item-4 box">Cuatro</div>
+        <div class="item-5 box">Cinco</div>
+        <div class="item-6 box">Seis</div>
+    </div>
+</body>
+</html>
