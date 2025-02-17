@@ -5,7 +5,7 @@
     width: 100vw;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 0.5%;
+    grid-gap: 0.5%;
     background-color: rgb(255, 253, 253);
     padding: 1%;
 }
@@ -142,44 +142,4 @@
 
 
 
-
-.grid-container__item--3 {}
-
-.grid-container__item--4 {}
-
-.grid-container__item--5 {}
-
-.grid-container__item--6 {}
-
-.grid-container__item--7 {}
-
-.grid-container__item--8 {}
-
-.grid-container__item--9 {}
-
-.grid-container__item--10 {}
-
-.grid-container__item--1 {}
-
-.grid-container__item--11 {}
-
-.grid-container__item--12 {}
-
-.grid-container__item--13 {}
-
-.grid-container__item--14 {}
-
-.grid-container__item--15 {}
-
-.grid-container__item--16 {}
-
-.grid-container__item--17 {}
-
-.grid-container__item--18 {}
-
-.grid-container__item--19 {}
-
-.grid-container__item--20 {}
-
-.grid-container__item--21 {}
 

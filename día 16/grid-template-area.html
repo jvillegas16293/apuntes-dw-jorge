@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3b404e;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px auto 100px;
+            gap: 20px;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .box {
+            background: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+            position: sticky;
+            top: 0;
+            background: #6C52D9;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #3EDFD7;
+        }
+
+        .content {
+            grid-area: content;
+            display: grid;
+            grid-template-areas:
+                "hero hero"
+                "content2 content3"
+                "dynamic dynamic";
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .content__item {
+            height: 200px;
+        }
+
+        .content__item--hero {
+            grid-area: hero;
+            height: 50px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #6C52D9;
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp i {
+            font-size: 24px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header box">Header</div>
+    <div class="sidebar box">Sidebar</div>
+    <div class="content">
+        <div class="content__item content__item--hero box">Content 1</div>
+        <div class="content__item box" style="grid-area: content2;">Content 2</div>
+        <div class="content__item box" style="grid-area: content3;">Content 3</div>
+        <div class="content__item box" style="grid-area: dynamic;">Dynamic Content</div>
+    </div>
+    <div class="footer box">Footer</div>
+
+    <div class="whatsapp">
+        <i class="fa fa-whatsapp"></i>
+    </div>
+
+    <script>
+        let contenedor = document.querySelector(".content");
+        for (let i = 0; i < 4; i++) {
+            const miHTML = `<div class="content__item box">Dinamico</div>`;
+            contenedor.innerHTML += miHTML;
+        }
+    </script>
+</body>
+
+</html>
