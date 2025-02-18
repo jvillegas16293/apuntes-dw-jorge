@@ -105,13 +105,12 @@ Existe la opcion minmax(), que nos permite definir un tamaño minimo y máximo p
 ¨¨¨CSS
 
 .Container {
-
     display: grid;
-    grid-template-columns: minmmax(100px 1fr) minmax(200px, 1fr) minmax(100px, 1fr)
-    grid-template-row ¡s: 100px, 100px, 100px
-    grid-gap_ 100px;
-
+    grid-template-columns: minmax(100px, 1fr) minmax(200px, 1fr) minmax(100px, 1fr);
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 100px;
 }
+
 
 ## Grid Template Areas
 
@@ -127,7 +126,11 @@ Podemos nombrar las celas utilizando ¨grid-template-areas y asignando un nobre 
  grid-template-area: 
  "header   header   header"
  "main   main   sidebar"
- "footer   footer   footer";
+ "footer   footer   footer";  
+
+ Una vez  nombramos les elementos con greed area, tenmemos que decir como se llama cada elmento.
+
+ Si  queremos los elmentos vacíos podemos poner un punto.
 
 
 }
@@ -164,8 +167,6 @@ Por defecto se utiliza stretch
  grid.gap: 10px; 
 justify-items: start
 aligh-items: end
-
-
 }
 
 Podemos decirla a un item en concreto que alinee de manera diferente utilizandon
@@ -175,7 +176,7 @@ Podemos decirla a un item en concreto que alinee de manera diferente utilizandon
 
 Sus opciones son: - start, center, stretch y baseline
 
-Podem,os alinear nuestro grid en base a su contenedor. Utilizando justify-content y align-content
+Podemdemos alinear nuestro grid en base a su contenedor. Utilizando justify-content y align-content
 
 Sus opciones son: start, end, center, stretch, space-around. space-between y space-evenly
 

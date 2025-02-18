@@ -22,7 +22,7 @@
                 "sidebar content"
                 "footer footer";
             grid-template-columns: 200px 1fr;
-            grid-template-rows: 100px auto 100px;
+            grid-template-rows: 100px auto;
             gap: 20px;
             padding: 20px;
             height: 100vh;
@@ -58,8 +58,7 @@
             display: grid;
             grid-template-areas:
                 "hero hero"
-                "content2 content3"
-                "dynamic dynamic";
+                "content2 content3";
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
@@ -71,6 +70,14 @@
         .content__item--hero {
             grid-area: hero;
             height: 50px;
+        }
+
+        .content__item--content2 {
+            grid-area: content2;
+        }
+
+        .content__item--content3 {
+            grid-area: content3;
         }
 
         .footer {
@@ -103,9 +110,8 @@
     <div class="sidebar box">Sidebar</div>
     <div class="content">
         <div class="content__item content__item--hero box">Content 1</div>
-        <div class="content__item box" style="grid-area: content2;">Content 2</div>
-        <div class="content__item box" style="grid-area: content3;">Content 3</div>
-        <div class="content__item box" style="grid-area: dynamic;">Dynamic Content</div>
+        <div class="content__item content__item--content2 box">Content 2</div>
+        <div class="content__item content__item--content3 box">Content 3</div>
     </div>
     <div class="footer box">Footer</div>
 
