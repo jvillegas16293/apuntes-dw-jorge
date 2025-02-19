@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .acordeon {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .acordeon__content {
+
+            max-height: 0;
+            overflow: hidden;
+            border: 1px solid blue;
+            transition: max-height 0.5s ease;
+
+        }
+
+        .acordeon__item.open .acordeon__content {
+            max-height: 300px;
+        }
+
+        .selector {
+            max-height: 300px;
+        }
+
+        /*Modo oscuro*/
+
+        .body{
+            background-color: #fff;
+            color: #000;
+            transition: color 2s ease-out,
+                        background-color 2s ease-in;
+
+
+        } 
+
+        body.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /*Notificacion*/
+
+        .notificaciones {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transforms  0.4s ease-in, 
+            opacity 0.4s ease-in;
+        }
+
+        .notificacion.show{
+            opacity: 1;
+            transform:  translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Acordeon</h2>
+
+    <div class="acordeon">
+
+        <div class="acordeon__item">
+            <h3>Pregunta 1</h3>
+            <div class="acordeon__content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat quae quam, minus
+                    molestias distinctio necessitatibus rem deserunt incidunt ea atque dolore maxime omnis eaque
+                    molestiae sint enim! Excepturi, soluta!</p>
+            </div>
+        </div>
+        <div class="acordeon__item">
+            <h3>Pregunta 2</h3>
+            <div class="acordeon__content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat quae quam, minus
+                    molestias distinctio necessitatibus rem deserunt incidunt ea atque dolore maxime omnis eaque
+                    molestiae sint enim! Excepturi, soluta!</p>
+            </div>
+
+        </div>
+        <div class="acordeon__item">
+            <h3>Pregunta 3</h3>
+            <div class="acordeon__content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat quae quam, minus
+                    molestias distinctio necessitatibus rem deserunt incidunt ea atque dolore maxime omnis eaque
+                    molestiae sint enim! Excepturi, soluta!</p>
+            </div>
+        </div>
+
+        <div class="acordeon__item">
+            <h3>Pregunta 4</h3>
+            <div class="acordeon__content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat quae quam, minus
+                    molestias distinctio necessitatibus rem deserunt incidunt ea atque dolore maxime omnis eaque
+                    molestiae sint enim! Excepturi, soluta!</p>
+            </div>
+        </div>
+
+    </div>
+
+        <h2>Modo oscuro</h2>
+        <button id="btn-dark">Encender / apagar la luz</button>
+
+        <h2>Notificaciones</h2>
+        <div class="notificaciones">Hola, soy una notificacion</div>
+        <button id="btn-noti">Mostrar notificacion</button>
+
+
+    <script>
+        /* Código .JS para nuestro acordeón */
+        /* Selecciono todos los elementos con la clase "acordeon__item" */
+        /* Recorro cada uno de ellos y les asigno un evento de clic */
+        /* Quito la clase "open" a todos y luego agrego la clase "open" al que hice clic */
+
+        const lista_items = document.querySelectorAll(".acordeon__item"); // Comillas corregidas
+
+        lista_items.forEach(item => {
+            item.addEventListener("click", () => { // Se agregó correctamente el evento de clic
+                lista_items.forEach(el => el.classList.remove("open")); // Se eliminan todas las clases "open"
+                // item.classList.add("open"); Se agrega la clase "open" al elemento clicado
+                item.classList.toggle("open"); // Si no esta agrega si esta quitalo 
+            });
+        });
+
+        // Código de JS para agregar o quitar clases
+        function cambiarClases(buttonSelector, targetSelector, nombreDeClase) {
+            const lista_botones = document.querySelectorAll(buttonSelector);
+            const targets = document.querySelectorAll(targetSelector);
+            lista_botones.forEach(button => {
+                button.addEventListener('click', () => {
+                    targets.forEach(target => {
+                        target.classList.toggle(nombreDeClase);
+                    });
+                });
+            });
+        }
+
+        cambiarClases("#btn-dark", "body", "dark-mode");
+        cambiarClases("#btn-noti", ".notificaciones", "show");
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container {
+        /* column-count: 3;
+        column-width: 200px; */
+        columns: 200px 3;
+        column-gap: 20px;
+    }
+
+
+    .container2 {
+        display: grid;
+        /* Pantallas grandes 4c */
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+@media (max-width:768px){
+        .container {
+            /* Pantallas medianas 2c  */
+            /* grid-template-columns: repeat(2, 1fr); */
+        }
+    }
+    @media (max-width:480px){
+        .container {
+            /* Pantallas medianas 2c  */
+            /* grid-template-columns: 1fr; */
+        }
+    }
+
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+.card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

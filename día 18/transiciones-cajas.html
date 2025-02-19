@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas con Padding</title>
+    <style>
+        body {
+  
+            background-color: #797777;
+        }
+
+        .container {
+            background-color: aquamarine;
+            width: 1000px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+
+            transition: background-color 1s;
+        }
+
+        .container:hover .box { /* Aplica a los elementos que tengan box, dentro de container */
+            margin-left: 900px;
+        }
+
+        .box__1{
+            background-color: rgb(11, 136, 136);
+            transition: margin 4s ease,
+        }
+
+        .box__2:hover {
+            background-color: rgb(243, 138, 18);
+            transition: margin 4s ease-in;
+        }
+
+        .box__3{
+            background-color: blue;
+            transition: margin 4s linear;
+        }
+
+        .box__4{
+            background-color: black;
+            transition: margin 4s ease-in-out;
+        }
+
+        .box__5{
+            background-color: rgb(65, 240, 65);
+            transition: margin 4s ease-out;
+        }
+
+        .box__6{
+            background-color: rgb(237, 92, 14);
+            transition: margin 4s cubic-bezier(.25,.65,.8,.49);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box  box__1" >EASE</div>
+        <div class="box box__2">EASE-IN</div>
+        <div class="box box__3">LINEAR</div>
+        <div class="box box__4">EASE-IN-OUT</div>
+        <div class="box box__5">EASE-OUT</div>
+        <div class="box box__6">CUBIC</div>
+    </div>
+
+</body>
+</html>

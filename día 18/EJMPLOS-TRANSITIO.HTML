@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Reset estilos input */
+        input {
+            all: unset;
+            border: 1px solid green;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 5px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        /* Estilo cuando el input está en foco */
+        input:focus {
+            border-color: red;
+            outline: none;
+        }
+
+        /* Estilo para el menú hover */
+        .menu {
+            background-color: red;
+            padding: 10px;
+            width: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            transform: translateX(-100%); /* Corrección del guion incorrecto */
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .menu:hover ul {
+            transform: translateX(0);
+        }
+
+        /* Transición active */
+        .card {
+            border: 1px solid blanchedalmond;
+            padding: 20px;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:active {
+            transform: scale(0.8);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Corrección en rgba() */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Inputs - Focus</h3>
+
+    <input type="text" placeholder="Escribe aquí...">
+    <input type="text" placeholder="Otro input...">
+
+    <div class="menu">
+        <h3>Menú - Hover</h3>
+        <ul>
+            <li>Home</li>
+            <li>Acerca</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+
+    <h3>Tarjeta - Active</h3>
+
+    <div class="card">
+        <h2>Título</h2>
+    </div>
+
+</body>
+
+</html>
