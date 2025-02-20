@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DW Party</title>
+    <link type="text/css" rel="stylesheet" href="./css/party-reglas.css" />
+    <link type="text/css" rel="stylesheet" href="./css/party-reset.css" />
+</head>
+
+<body class="body">
+    <header class="header">
+        <p>Soy el header</p>
+        <button class="header__button">Botón</button>
+    </header>
+    <aside class="sidebar">Sidebar</aside>
+    <main class="contenido">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="https://placehold.co/600x400" alt="Web Party" class="hero__image">
+            <h1 class="hero__title">Web Party DW!</h1>
+        </section>
+
+        <!-- Container Section -->
+        <section class="container">
+            <div class="clickable-box">
+                Hazme Click
+            </div>
+        </section>
+
+        <!-- Galeria Section -->
+        <section class="galeria">
+            <div class="grid">
+                <div class="grid-item"><img src="https://placehold.co/600x400" alt="Imagen 1">
+                    <p>Imagen 1</p>
+                </div>
+                <div class="grid-item"><img src="https://placehold.co/600x400" alt="Imagen 2">
+                    <p>Imagen 2</p>
+                </div>
+                <div class="grid-item large"><img src="https://placehold.co/600x400" alt="Imagen 3">
+                    <p>Imagen 3</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">Footer
+        <button class="footer__button" id="btn-modo-oscuro">Botón</button>
+    </footer>
+    <script>
+        //--------------------------------------------------//
+        // paso 1: obtener elementos del DOM (documento HTML)
+        //--------------------------------------------------//
+
+        const miBoton = document.querySelector("#btn-modo-oscuro");
+        const miBody = document.querySelector(".body");
+        const sidebar = document.querySelector(".sidebar");
+        console.log(sidebar); // me muestra en pantalla en la consola si encuentra sidebar
+
+        //--------------------------------------------------//
+        // paso 2: crear nuestras funciones
+        //--------------------------------------------------//
+
+        function cambiarAModoOscuro() {
+            console.log("me hicieron clic");
+            console.log("mi boton es");
+
+            // Cambié 'body' por 'miBody' ya que 'miBody' es la constante que contiene el cuerpo de la página
+            miBody.classList.toggle("darkmode");
+        }
+
+        miBoton.addEventListener("click", cambiarAModoOscuro); // Agregar escucha de clic a mi botón y llamar a la función cada vez que lo aprietan
+
+        //--------------------------------------------------//
+        // paso 3: ejecutar nuestro código
+        //--------------------------------------------------//
+        // cambiarAModoOscuro();
+
+        // Podemos agregar HTML dentro de un elemento, en este caso, el sidebar
+        sidebar.innerHTML = "Hola soy un sidebar";
+    </script>
+</body>
+
+</html>

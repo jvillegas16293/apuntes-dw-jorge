@@ -58,4 +58,4 @@ prop    duration  timming-fuction    delay
 
 - ease-in-out
 
-- cubic-bezier: tiempo personalizado. 
+- cubic-bezier(): tiempo personalizado. 

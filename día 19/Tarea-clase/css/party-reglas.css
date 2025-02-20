@@ -1,0 +1,68 @@
+.body {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar contenido contenido"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 100px 1fr 100px; 
+    height: 100vh; 
+}
+
+
+
+
+/* Estilos de cada área */
+.header {
+    grid-area: header;
+    background-color: #faa609;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.contenido {
+    grid-area: contenido;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightgreen;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__button {
+    background-color: #f75b08;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 400;
+    position: relative;
+    outline: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 55px;
+    width: 160px;
+    
+}
+
+.body.darkmode {
+    background-color: black;
+    color: white;
+}

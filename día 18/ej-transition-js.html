@@ -118,8 +118,7 @@
         /* Recorro cada uno de ellos y les asigno un evento de clic */
         /* Quito la clase "open" a todos y luego agrego la clase "open" al que hice clic */
 
-        const lista_items = document.querySelectorAll(".acordeon__item"); // Comillas corregidas
-
+        const lista_items = document.querySelectorAll(".acordeon__item"); // Selecciona todos los elementos con la clase "acordeon__item"
         lista_items.forEach(item => {
             item.addEventListener("click", () => { // Se agregó correctamente el evento de clic
                 lista_items.forEach(el => el.classList.remove("open")); // Se eliminan todas las clases "open"
