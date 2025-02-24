@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconos RRSS</title>
+
+    <link type="text/css" rel="stylesheet" href="./CSS/reglas-iconos-rrss.css" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=dark_mode" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link type="text/css" rel="stylesheet" href="./CSS/layout.css" />
+        <link type="text/css" rel="stylesheet" href="./CSS/controller.css" />
+        <link type="text/css" rel="stylesheet" href="./CSS/rrss..css" />
+</head>
+
+<body class="body u-bgPrimary">
+
+    <header class="header u-bgPrimary">
+        <h1 class="u-txtCrotha u-txtPrimary">Redes Sociales</h1>
+    </header>
+
+    <main class="main u-bgSecondary">
+        <div class="icons">
+
+            <div class="IconBox u-bgPrimary IconBox--fb">
+                <a class="IconBox--link" href="">
+                    <div class="Icon-layers">
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                        <span class="IconBox-span"></span>
+                    </div>
+                    <div class="IconBox-text">
+                        Fecebook
+                    </div>
+                </a>
+
+                <div class="IconBox u-bgPrimary IconBox--x">
+                    <a class="IconBox--link" href="">
+                        <div class="Icon-layers">
+                            <span class="IconBox-span"></span>
+                            <span class="IconBox-span"></span>
+                            <span class="IconBox-span"></span>
+                            <span class="IconBox-span"></span>
+                            <span class="IconBox-span fa-brands fa-x-twitter"></span>
+                        </div>
+                        <div class="IconBox-text">
+                            Twitter
+                        </div>
+                    </a>
+
+                    <div class="IconBox u-bgPrimary IconBox--insta">
+                        <a class="IconBox--link" href="">
+                            <div class="Icon-layers">
+                                <span class="IconBox-span"></span>
+                                <span class="IconBox-span"></span>
+                                <span class="IconBox-span"></span>
+                                <span class="IconBox-span"></span>
+                                <span class="IconBox-span fab fa-instagram"></span>
+                            </div>
+                            <div class="IconBox-text">
+                                Instagram
+                            </div>
+                        </a>
+
+                        <div class="IconBox u-bgPrimary IconBox--lkdin">
+                            <a class="IconBox--link" href="">
+                                <div class="Icon-layers">
+                                    <span class="IconBox-span"></span>
+                                    <span class="IconBox-span"></span>
+                                    <span class="IconBox-span"></span>
+                                    <span class="IconBox-span"></span>
+                                    <span class="IconBox-span fab fa-linkedin-in"></span>
+                                </div>
+                                <div class="IconBox-text">
+                                    Lkdin
+                                </div>
+                            </a>
+
+                            <div class="IconBox u-bgPrimary IconBox--yt">
+                                <a class="IconBox--link" href="">
+                                    <div class="Icon-layers">
+                                        <span class="IconBox-span"></span>
+                                        <span class="IconBox-span"></span>
+                                        <span class="IconBox-span"></span>
+                                        <span class="IconBox-span"></span>
+                                        <span class="IconBox-span fab fa-youtube"></span>
+                                    </div>
+                                    <div class="IconBox-text">
+                                        Youtube
+                                    </div>
+                                </a>
+
+                                <div class="IconBox u-bgPrimary IconBox--lion">
+                                    <a class="IconBox--link" href="">
+                                        <div class="Icon-layers">
+                                            <span class="IconBox-span"></span>
+                                            <span class="IconBox-span"></span>
+                                            <span class="IconBox-span"></span>
+                                            <span class="IconBox-span"></span>
+                                            <span class="IconBox-span">L</span>
+                                        </div>
+                                        <div class="IconBox-text">
+                                            Rey Leon
+                                        </div>
+                                    </a>
+
+                                </div>
+
+
+                            </div>
+    </main>
+
+    <div class="Controllers">
+        <button id="btnDireccion" class="Btn Btn--icon">
+            Columna
+        </button>
+
+        <button id="btnDarkLight" class="Btn Btn--icon">
+            Dark-mode
+        </button>
+
+        <button id="btnLightMode" class="Btn Btn--icon">
+            Light-mode
+        </button>
+    </div>
+
+    <script>
+        // 1. Declarar variables de nuestro DOM
+        const btnDarkLight = document.getElementById('btnDarkLight');
+        const btnDireccion = document.getElementById('btnDireccion');
+        const btnLightMode = document.getElementById('btnLightMode');
+
+        console.log("Botón Dark Light es", btnDarkLight); // Miramos en la consola si nos está reconociendo el botón
+
+        // 2. Agregar funciones y eventListeners
+
+
+
+        // Agregar clic al boton fila / columna 
+        //.. su codigo
+        // agregar o quitar la clase de flexCol
+        //.. su código
+        // preguntar si tiene la clase flexCol para cambiar el texto del boton
+        //.. su código
+            // código si se cumple la condicion (texto = fila)
+            //.. su código
+            // código si no se cumple la condicion (texto = columna)
+            //.. su código
+
+
+
+
+
+
+
+
+        // 2. Agregar funciones y eventListeners
+        btnDarkLight.addEventListener("click", () => {
+            document.body.classList.toggle("u-dark");
+        });
+
+        btnLightMode.addEventListener("click", () => {
+            document.body.classList.remove("u-dark"); // Si existe, lo quita (modo claro)
+        });
+
+        if (document.body.classList.contains("u-dark")) {
+
+            btnDarkLight.querySelector("span").innerText = "light-mode";
+
+        } else {
+
+            btnDarkLight.querySelector("span").innerText = "dark-mode";
+        }
+
+    </script>
+
+</body>
+
+</html>
