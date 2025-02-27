@@ -47,32 +47,52 @@ function  ladrar() {
 - Listas de cosas (arrays): Se escriben con  [] y cada elemento se separa con ,
 - Objeto (object): Coleccion de propiedades (características) y métodos (funcionalidades), y se escriben con las {}
 
+## Variables Referenciales VS Primitivas
 
-## Ejercicios
+- V primitivo --> Cubo donde guardamos algun dato. Strings, numeros, booleanos y otro... Estos pueden ser **let** o **const**
+- V referencial --> Es la llave del camion no el camión arrays y objetos. Estos son siempre **const**
+
+## Comentatios en JS
+
+- Coementario simple: Se utiliza // para 1 linea
+- Comentario en bloque de multiples líneas: /*-------------*/
+
+- Comentario de documentacion: /**-----------------*/
+Se usa para iniciar un bloque informativo, se usa mucho para clases o para funciones.
+
+## Operadores aritméticos 
+
+Tenemos operadores de asignacion, comparacion y lógicos.
+
+Los aritméticos mas comunes son:
+
+- Suma "+" -> suma dos valores
+
+- Resta "-" -> resta dos valores
+
+. Incrementar un valor "++" -> Incrementar valor de una variable
+
+- Decrementar valor "--" -> Disminuye valor de una variable
+
+- Multiplicacion "*"
+
+- Division "/"
+
+- Módulo (%) -> Es el resto de la dicion de dos valores. 
+
+//-------------------Simbolos Comparativos-------------------//
+
+=== Son guales estrictamente
+== // para ver si son iguales
+!= // para ver si son diferentes
+< // para ver si es menor
+> // para ver si es mayor
+<= // para ver si es menor o igual
+>= // para ver si es mayor o igual
 
 
 
 
-- Crea un array llamado frutas que contenga las siguientes frutas: "Manzana", "Banana", "Naranja".
-- Imprime en la consola el primer elemento del array frutas.
-- Cambia el segundo elemento del array frutas a "Mango".
-- Imprime en la consola el array completo para verificar el cambio.
-
-Ejercicio 2: Creación y acceso a objetos
-- Crea un objeto llamado persona con las propiedades nombre (cadena), edad (número) y ciudad (cadena).
-- Imprime en la consola el valor de la propiedad nombre del objeto persona.
-- Cambia el valor de la propiedad edad a 30.
-- Imprime en la consola el objeto persona completo para verificar el cambio.
-
-Ejercicio 3: Arrays de objetos
-- Crea un array llamado estudiantes que contenga tres objetos, cada uno representando a un estudiante con - las propiedades nombre y nota.
-- Imprime en la consola el nombre del segundo estudiante.
-- Cambia la nota del primer estudiante a 95.
-- Utiliza un bucle for para imprimir el nombre y la nota de cada estudiante en la consola.
-
-Ejercicio 4: Métodos en objetos
-- Crea un objeto llamado calculadora con las propiedades a y b (números) y un método sumar que retorne la suma de a y b.
-- Asigna valores a a y b y llama al método sumar, imprimiendo el resultado en la consola.
 
 
 
