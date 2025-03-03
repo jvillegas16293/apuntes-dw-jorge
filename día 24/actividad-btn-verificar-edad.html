@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Edad</title>
+</head>
+<body>
+
+    <input type="number" id="inputEdad" placeholder="Ingresa tu edad">
+    <button id="registro">Entrar</button>
+    <p id="content"></p>
+
+    <script>
+        const registro = document.querySelector("#registro");
+        registro.addEventListener("click", entrar);
+
+        function entrar() {
+            const inputEdad = document.querySelector("#inputEdad");
+            const mensaje = document.querySelector("#content");
+            let edad = parseInt(inputEdad.value, 10);
+
+            if (!isNaN(edad)) {
+                if (edad >= 18) {
+                    mensaje.textContent = "Bienvenido a la página";
+                    mensaje.style.color = "green";
+                    alert("Bienvenido a la página");
+                } else {
+                    mensaje.textContent = "No puedes entrar a la página";
+                    mensaje.style.color = "red";
+                    alert("No puedes entrar a la página");
+                }
+            } else {
+                mensaje.textContent = "Por favor, ingresa una edad válida.";
+                mensaje.style.color = "orange";
+                alert("Por favor, ingresa una edad válida.");
+            }
+        }
+    </script>
+
+</body>
+</html>

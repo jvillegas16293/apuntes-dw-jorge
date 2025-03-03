@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <button id="btnSuma">Suma 1</button>
+    <button id="btnResta">Resta 1</button>
+    <button id="btnMulti">Multiplicar x 5</button>
+    <button id="btnDivi">Dividir entre 2</button>
+
+    <h3>Cantidad de clicks</h3>
+    <div id="resultado">0000000000</div>
+
+    <script>
+
+        // ----------------------------------------------------------
+        // 1. Declaramos Variables y obtenemos nuestros tags del DOM
+        // ----------------------------------------------------------
+        const miBotonSuma = document.getElementById("btnSuma");
+        const miBotonResta = document.getElementById("btnResta");
+        const miBotonMultiplica = document.getElementById("btnMulti");
+        const miBotonDivide = document.getElementById("btnDivi");
+
+        const divResultado = document.getElementById("resultado");
+
+        // Función que imprime en pantalla un resultado
+        function ImprimirEnPantalla(dato) {
+            console.log(dato);  // Imprime el dato en la consola para depuración
+            divResultado.innerText = dato; // Muestra el dato en el div con el ID "resultado"
+        }
+
+        let numero = 2; // Variable para almacenar el número actual
+
+        // Inicializamos la pantalla con un mensaje y el valor inicial de "numero"
+        ImprimirEnPantalla("Haz click en los botones");
+        ImprimirEnPantalla(numero);
+
+        // --------------------------------------------------------
+        // 2. Manipulamos el DOM al hacer click en los botones
+        // --------------------------------------------------------
+
+        // Acción para el botón de "Suma"
+        miBotonSuma.addEventListener("click", () => {
+            numero = numero + 1; // Incrementa el número en 1
+            ImprimirEnPantalla(numero); // Muestra el nuevo número en el div
+        });
+
+        // Acción para el botón de "Resta"
+        miBotonResta.addEventListener("click", () => {
+            numero = numero - 1; // Decrementa el número en 1
+            ImprimirEnPantalla(numero); // Muestra el nuevo número en el div
+        });
+
+        // Acción para el botón de "Multiplicar"
+        miBotonMultiplica.addEventListener("click", () => {
+            numero = numero * 5; // Multiplica el número por 5
+            ImprimirEnPantalla(numero); // Muestra el nuevo número en el div
+        });
+
+        // Acción para el botón de "Dividir"
+        miBotonDivide.addEventListener("click", () => {
+            numero = numero / 2; // Divide el número entre 2
+            ImprimirEnPantalla(numero); // Muestra el nuevo número en el div
+        });
+
+    </script>
+
+</body>
+
+</html>
