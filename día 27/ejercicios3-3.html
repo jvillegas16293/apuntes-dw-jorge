@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar URL</title>
+    <style>
+  
+    </style>
+</head>
+<body>
+<H3>Corrector</H3>
+<textarea name="texto" id="comentario" cols="30" rows="10"></textarea>
+    <div id="resultado">
+
+    </div>
+    <script>
+        const textArea = docuemnt.querySelector("#comentario");
+        const divRes = document.querySelector("#resultado")
+        const palabras0fensivas = ["gatito", "perrito", "tortuga"];
+
+        textArea.addEvenlistener ("keyup", ()=> {
+            // leer datos
+            let texto = textArea.value;
+            // procesamos
+            for(i=0; i <palabras0fensivas.lenght ; i++){
+                const palabra = palabras0fensivas[i];
+                const censura = "***";
+                texto = texto.replaceAll(palabra, censura);
+
+            }
+            // imprimimos
+            divRes.innerText = texto;
+        })
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

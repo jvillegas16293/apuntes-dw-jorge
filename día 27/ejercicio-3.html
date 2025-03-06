@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazo de Texto</title>
+    <style>
+        .resaltado { background-color: yellow; }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="texto" value="TuMarca es la mejor opción. Descubre lo que TuMarca tiene para ti.">
+    <button onclick="resaltarTexto()">Resaltar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function resaltarTexto() {
+            let texto = document.getElementById("texto").value;
+            let textoResaltado = texto.replaceAll("TuMarca", '<span class="resaltado">TuMarca</span>');
+            document.getElementById("resultado").innerHTML = textoResaltado;
+        }
+    </script>
+
+</body>
+</html>
