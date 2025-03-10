@@ -15,29 +15,22 @@
 
     </div>
     <script>
-        const textArea = docuemnt.querySelector("#comentario");
-        const divRes = document.querySelector("#resultado")
-        const palabras0fensivas = ["gatito", "perrito", "tortuga"];
+        const textArea = document.querySelector("#comentario"); 
+        const divRes = document.querySelector("#resultado");
+        const palabrasOfensivas = ["gatito", "perrito", "tortuga"]; // Corregido "palabras0fensivas" a "palabrasOfensivas"
 
-        textArea.addEvenlistener ("keyup", ()=> {
+        textArea.addEventListener("keyup", () => { // Corregido "addEvenlistener" a "addEventListener"
             // leer datos
             let texto = textArea.value;
             // procesamos
-            for(i=0; i <palabras0fensivas.lenght ; i++){
-                const palabra = palabras0fensivas[i];
+            for (let i = 0; i < palabrasOfensivas.length; i++) { // Corregido "lenght" a "length"
+                const palabra = palabrasOfensivas[i];
                 const censura = "***";
                 texto = texto.replaceAll(palabra, censura);
-
             }
             // imprimimos
             divRes.innerText = texto;
         })
-
-        
-
-
-
-
     </script>
 </body>
 </html>

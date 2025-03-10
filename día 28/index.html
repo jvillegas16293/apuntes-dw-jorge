@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de ForEach</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint accusantium nemo veniam. Harum, placeat
+        nostrum aut, accusantium cupiditate aliquid officiis repellendus esse quod, perspiciatis optio expedita corporis
+        sit quia!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor tempora ut enim. Consequuntur minima
+        nemo delectus numquam maiores expedita ipsum laboriosam. Exercitationem, iusto reprehenderit dolores totam
+        praesentium suscipit illo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, perferendis autem aut nam ipsum animi voluptas.
+        Nostrum maxime sapiente placeat optio mollitia vel cum reprehenderit dolorem? Adipisci velit sed sequi?</p>
+
+    <button class="btn">Botón 1</button>
+    <button class="btn">Botón 2</button>
+
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+
+    <button class="btnToggleCard">ocultar/mostrar</button>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+
+
+    <script>
+
+        // 1. cambiamos color y fuente a los <p>
+        const listaParrafos = document.querySelectorAll("p");
+        // hacemos forEach a la variable para cambiarle los estilos
+
+        listaParrafos.forEach((p) => {
+            p.style.color = "#3333"
+            p.style.fontSize = "32px"
+        });
+
+        // 2. Teniendo dos botones con class "btn", usar forEach para agregar un evento de clic a cada uno, y para hacer click, cambie su color de fonde a #007bff y texto blanco
+
+        const listaBotones = document.querySelectorAll("#btn");
+
+        listaBotones.forEach((boton) => {
+
+            boton.addEventListener("click", () => {
+                boton.style.color = "#fff";
+                boton.style.backgroundcolor = "#007bff";
+            })
+        });
+
+        // 3. Mostrar o ocultar elementos. Seleccionar todos los elementos con la clase ".card" y crear un boton que los oculte a todos o los muestre cuado le haga clic
+
+        const listaCard = document.querySelectorAll(".card");
+        const btnToggleCards = document.querySelector(".btnToggleCard");
+
+        btnToggleCards.addEventListener("click", () => {
+            // recorrer todas las tarjetas para esconderlas "card es que asigno toda la lisya a una variable y con esa variable puedo modificar lo que quiera ?¿"
+            listaCard.forEach((card) => {
+                // activar a desacticar la clase hidden para cada tarjeta
+                card.classList.toggle("hidden");
+            });
+        })
+
+        // 4. Usando "innerHTML", crear un menu dinamicamente dado el array ["home". "Nosotros". "contacto"]. Usar forEach para crear un enlace <a> y agregarla a nuestro <nav>.
+
+        const listaMenu = ["Home", "Nosotros", "Contacto"];
+        const navegacion = document.getElementById("menu");
+
+        listaMenu.forEach(item => {
+
+            const enlace = `"<a href="#${item}"> ${item} </a>`;
+            navegacion.innerHTML += enlace;
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

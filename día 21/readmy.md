@@ -5,7 +5,7 @@ Se pueden crear valores de css para reutilizar valores en diferentes partes del 
 - Mejora la legitibidad del código
 - Facilita la actualización de valores
 
-Se suele crear de manera glebal en la raíz del documento, en la web, el .ROOT  es la rtiqueta <html> , en SVG es la etiqeuta <svg>
+Se suele crear de manera global en la raíz del documento, en la web, el .ROOT  es la rtiqueta <html> , en SVG es la etiqeuta <svg>
 , además tiene mayor especificidad ":root" que html-
 
 

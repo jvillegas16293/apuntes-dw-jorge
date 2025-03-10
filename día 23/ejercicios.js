@@ -1,32 +1,34 @@
-// Ejercicio 1: Creación y acceso a arrays //
+// Ejercicio 1: Creación y acceso a arrays
 
 // Crea un array llamado frutas que contenga las siguientes frutas: "Manzana", "Banana", "Naranja".
-const frutas = ["manzana", "banana", "naranja"]
+const frutas = ["Manzana", "Banana", "Naranja"];
 
-// Imprime en la consola el primer elemento del array frutas.
-console.log(frutas[0]);
-console.log(frutas[1]);
+// Imprime en la consola el primer y segundo elemento del array frutas.
+console.log(frutas[0]); // Imprime "Manzana"
+console.log(frutas[1]); // Imprime "Banana"
 
 // Cambia el segundo elemento del array frutas a "Mango".
-frutas[1] = "mango";
+frutas[1] = "Mango";
 
-// Imprime en la consola el objeto persona completo para verificar el cambio.
-console.log(frutas[2]);
-console.log(frutas.lengt); // Imprime en consola 3
+// Imprime en la consola el tercer elemento del array frutas.
+console.log(frutas[2]); // Imprime "Naranja"
 
-// Ejercicio 2: Creación y acceso a objetos //
+// Imprime en la consola la longitud del array.
+console.log(frutas.length); // Imprime 3
 
-// Crea un objeto llamado persona con las propiedades nombre (cadena), edad (número) y ciudad (cadena).
+// ---------------------------------------------------
+
+// Ejercicio 2: Creación y acceso a objetos
+
+// Crea un objeto llamado persona con las propiedades nombre, edad y ciudad.
 const persona = {
-
-    nombre: "jorge",
+    nombre: "Jorge",
     edad: 32,
     ciudad: "Rosario"
+};
 
-}
-
-// mprime en la consola el valor de la propiedad nombre del objeto persona.
-console.log persona.nombre = "jorge"
+// Imprime en la consola el valor de la propiedad nombre del objeto persona.
+console.log(persona.nombre); // Imprime "Jorge"
 
 // Cambia el valor de la propiedad edad a 30.
 persona.edad = 30;
@@ -34,95 +36,84 @@ persona.edad = 30;
 // Imprime en la consola el objeto persona completo para verificar el cambio.
 console.log(persona);
 
+// ---------------------------------------------------
+
 // Ejercicio 3: Arrays de objetos
 
-// Crea un array llamado estudiantes que contenga tres objetos, cada uno representando a un estudiante con - las propiedades nombre y nota.
-
-const listaestudiantes = [
-    {
-        nombre: "jorge",
-        nota: 10
-    },
-    {
-        nombre: "maria",
-        nota: 10
-    },
-    {
-        nombre: "jorge",
-        nota: 10
-    },
+// Crea un array llamado listaEstudiantes con tres objetos, cada uno representando a un estudiante.
+const listaEstudiantes = [
+    { nombre: "Jorge", nota: 10 },
+    { nombre: "Maria", nota: 10 },
+    { nombre: "Pedro", nota: 10 }
 ];
 
-const listaestudiantes = [
-    {nombre: "jorge",nota: 10},
-    {nombre: "jorge",nota: 10},
-    {nombre: "jorge",nota: 10},
-];
+// Imprime en la consola el nombre del segundo estudiante.
+console.log(listaEstudiantes[1].nombre); // Imprime "Maria"
+console.log(listaEstudiantes[1]); // Imprime el objeto de Maria
 
-// - Imprime en la consola el nombre del segundo estudiante.
-
-console.log(listaestudiantes[1].nombre); // nombre: maria
-console.log(listaestudiantes[1]); // maria
-
-// - Cambia la nota del primer estudiante a 95.
-
-listaestudiantes[0].nota = 95;
+// Cambia la nota del primer estudiante a 95.
+listaEstudiantes[0].nota = 95;
 
 // Utiliza un bucle for para imprimir el nombre y la nota de cada estudiante en la consola.
-
-for( const i=0 i<10 i=i+1){
-    console.log(listaestudiantes[i].nombre);
-    console.log(listaestudiantes[i].nota);
+for (let i = 0; i < listaEstudiantes.length; i++) {
+    console.log(listaEstudiantes[i].nombre, ":", listaEstudiantes[i].nota);
 }
+
+// ---------------------------------------------------
 
 // Ejercicio 4: Métodos en objetos
 
-// - Crea un objeto llamado calculadora con las propiedades a y b (números) y un método sumar que retorne la suma de a y b.
-
+// Crea un objeto llamado calculadora con las propiedades a y b, y un método sumar.
 const calculadora = {
     a: 10,
     b: 20,
-    sumar: function(){
+    sumar: function () {
         return this.a + this.b;
-    }   
-}
+    }
+};
 
-console.log(calculadora.a); // Imprime en consola 10
-console.log(calculadora.b); // Imprime en consola 20
-console.log(calculadora.sumar()); // Imprime en consola 30
+// Imprime los valores de a y b, y la suma.
+console.log(calculadora.a); // Imprime 10
+console.log(calculadora.b); // Imprime 20
+console.log(calculadora.sumar()); // Imprime 30
 
-//Le estoy diciendo que la calculadora a  y b ahora valen 30 y 40 respectivamente
+// Cambia los valores de a y b.
 calculadora.a = 30;
 calculadora.b = 40;
-calculadora.sumar(); // Imprime en consola 70
+
+// Imprime la nueva suma.
+console.log(calculadora.sumar()); // Imprime 70
+
+// ---------------------------------------------------
 
 // Actividad 1: Variables y Tipos de Datos
 
 let numero = 10;
-let texto = "esto es una actividad";
+let texto = "Esto es una actividad";
 let esVerdadero = true;
 let esFalso = false;
 let valorNulo = null;
 let noDefinido = undefined;
 
+// Crea un objeto programa con las mismas propiedades.
 const programa = {
+    numero: 10,
+    texto: "Esto es una actividad",
+    esVerdadero: true,
+    esFalso: false,
+    valorNulo: null,
+    noDefinido: undefined
+};
 
-    numero = 10;
-    texto = "esto es una actividad";
-    esVerdadero = true;
-    esFalso = false;
-    valorNulo = null;
-    noDefinido = undefined;
+// Imprime las propiedades del objeto programa.
+console.log(programa.numero); // Imprime 10
+console.log(programa.texto); // Imprime "Esto es una actividad"
+console.log(programa.esVerdadero); // Imprime true
+console.log(programa.esFalso); // Imprime false
+console.log(programa.valorNulo); // Imprime null
+console.log(programa.noDefinido); // Imprime undefined
 
-}
-
-console.log(programa.numero); // Imprime en consola 10
-console.log(programa.texto); // Imprime en consola esto es una actividad
-console.log(programa.esVerdadero); // Imprime en consola true
-console.log(programa.esFalso); // Imprime en consola false
-console.log(programa.valorNulo); // Imprime en consola null
-console.log(programa.noDefinido); // Imprime en consola undefined
-
+// ---------------------------------------------------
 
 // Actividad 2: Operadores y Expresiones
 
@@ -135,8 +126,8 @@ let suma = num1 + num2;
 let resta = num1 - num2;
 let multiplicacion = num1 * num2;
 let division = num1 / num2;
-let incremento = num1++;
-let decremento = num1--;
+let incremento = ++num1;
+let decremento = --num1;
 
 // Comparaciones
 let esMayor = num1 > num2;
@@ -145,35 +136,29 @@ let esIgual = num1 === num2;
 let esDiferente = num1 !== num2;
 
 // Imprimir resultados en la consola
-console.log("Suma:", suma); // Imprime en consola 15
-console.log("Resta:", resta); // Imprime en consola 5
-console.log("Multiplicación:", multiplicacion); // Imprime en consola 50
-console.log("División:", division); // Imprime en consola 2
-console.log("¿num1 es mayor que num2?:", esMayor); // Imprime en consola true
-console.log("¿num1 es menor que num2?:", esMenor); // Imprime en consola false
-console.log("¿num1 es igual a num2?:", esIgual); // Imprime en consola false   
-console.log("¿num1 es diferente de num2?:", esDiferente); // Imprime en consola true    
+console.log("Suma:", suma); // 15
+console.log("Resta:", resta); // 5
+console.log("Multiplicación:", multiplicacion); // 50
+console.log("División:", division); // 2
+console.log("¿num1 es mayor que num2?:", esMayor); // true
+console.log("¿num1 es menor que num2?:", esMenor); // false
+console.log("¿num1 es igual a num2?:", esIgual); // false
+console.log("¿num1 es diferente de num2?:", esDiferente); // true
+
+// ---------------------------------------------------
 
 // Actividad 3: Estructuras de Control
 
+// Sentencia if
 let edad = 18;
 
 if (edad >= 18) {
-  console.log("Eres mayor de edad.");
+    console.log("Eres mayor de edad.");
 } else {
-  console.log("Eres menor de edad.");
+    console.log("Eres menor de edad.");
 }
 
+// Bucle for que imprime los números del 1 al 10
 for (let i = 1; i <= 10; i++) {
-  console.log(i);
+    console.log(i);
 }
-
-
-
-
-
-
-
-
-
-

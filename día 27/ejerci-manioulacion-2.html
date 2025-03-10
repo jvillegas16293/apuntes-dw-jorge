@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de texto</title>
+</head>
+<body>
+
+    <!-- Título que se va a manipular -->
+    <h1 id="titulo">texto en minúsculas/mayúsculas</h1>
+    
+    <!-- Botones para manipular el texto -->
+    <button id="mayusculas">MAYUSCULAS</button>
+    <button id="minusculas">minúsculas</button>
+
+    <!-- Este div mostrará el resultado de la manipulación del texto -->
+    <div id="resultado"></div>
+
+    <script>
+        // Obtenemos los elementos del DOM
+        const titulo = document.getElementById("titulo");
+        const resultado = document.getElementById("resultado");
+        const botonMayusculas = document.getElementById("mayusculas");
+        const botonMinusculas = document.getElementById("minusculas");
+
+        // Función para convertir el texto a mayúsculas
+        function convertirMayus() {
+            resultado.innerText = titulo.innerText.toUpperCase();
+        }
+
+        // Función para convertir el texto a minúsculas
+        function convertirMinus() {
+            resultado.innerText = titulo.innerText.toLowerCase();
+        }
+
+        // Añadir los event listeners a los botones
+        botonMayusculas.addEventListener("click", convertirMayus);
+        botonMinusculas.addEventListener("click", convertirMinus);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica lanzar una moneda</title>
+</head>
+
+<body>
+
+    <button class="btn" id="btn">Tirar Moneda</button>
+    <div id="txtresultado"></div>
+    <div>
+        Cant de Caras: <span id="txtCara">0</span> <br />
+        Cant de Secas: <span id="txtSeca">0</span> <br />
+        Porcentaje de Caras: <span id="txtPorcentaje">0</span>%
+    </div>
+
+    <script>
+        // Obtener referencias a los elementos del DOM
+        const btn = document.getElementById("btn");
+        const txtCara = document.getElementById("txtCara");
+        const txtSeca = document.getElementById("txtSeca");
+        const txtPorcentaje = document.getElementById("txtPorcentaje");
+        const txtResultado = document.getElementById("txtresultado");
+
+        let cantCaras = 0;
+        let cantSecas = 0;
+
+        btn.addEventListener("click", () => {
+            // Obtener número aleatorio
+            const numeroAleatorio = Math.random();
+
+            // Operación ternaria para determinar cara o cruz
+            const moneda = (numeroAleatorio > 0.5) ? "Cara" : "Cruz";
+
+            // Contar caras y secas
+            if (moneda === "Cara") {
+                cantCaras++;
+            } else {
+                cantSecas++;
+            }
+
+            // Calcular % de caras
+            const porcentaje = (cantCaras / (cantCaras + cantSecas)) * 100;
+
+            // Imprimir resultados en la página
+            txtResultado.innerText = `Tiraste ${moneda}`;
+            txtCara.innerText = cantCaras;
+            txtSeca.innerText = cantSecas;
+            txtPorcentaje.innerText = Math.round(porcentaje) + `%`;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contador con BOTON</title>
 </head>
 <body>
 
+    <!-- Botón para hacer clic -->
+    <button id="miBoton">Haz clic</button>
 
-
+    <!-- Contenedor donde se mostrará el conteo -->
+    <div id="content">0</div>
 
     <script>
-        
         // DECLARAR VARIABLES 
-        const boton=document.querySelector("button");
-        const container=document.querySelector("·content");
+        const boton = document.querySelector("#miBoton"); // Selecciona el botón correctamente
+        const container = document.querySelector("#content"); // Selecciona el contenedor/div correctamente
 
-        // DECLARAR EVENTLISTENER Y FUNCIONES
+        // DECLARAR EVENT LISTENER Y FUNCIONES
+        boton.addEventListener("click", contar);
 
-        const boton.addEventListener("click",contar);
+        let numero = 0; // Variable de ámbito global
 
-        let numero=0; // variable de ambito global
-
-        function contar(){
-            const nombre="jotge"; // variables de ambito local
-            console.log("me hicieorn click");
-            numero=numero+1;
-            container.textContent=numero;
+        function contar() {
+            const nombre = "Jorge"; // Variable de ámbito local (aunque no se usa)
+            console.log("Me hicieron clic");
+            numero = numero + 1;
+            container.textContent = numero;
         }
 
-        // INICIAR NUESTRO PROGRAMA
-
-        
-
-
+        // INICIAR NUESTRO PROGRAMA (En este caso, no es necesario ningún código aquí)
     </script>
-    
+
 </body>
 </html>
