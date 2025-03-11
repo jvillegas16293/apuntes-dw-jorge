@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btnPiedra">Piedra</button>
+    <button id="btnPapel">Papel</button>
+    <button id="btnTijera">Tijera</button>
+
+    <script>
+        //----------------------1. Variables-----------------------//
+
+        const btnPapel = document.getElementById("btnPapel")
+        const btnPiedra = document.getElementById("btnPiedra")
+        const btnTijera = document.getElementById("btnTijera")
+
+        //---------------------2. Funciones y eventlisteners-----------//
+
+        btnPiedra.addEventListener("click", ()=>{jugar("piedra");  });
+        btnPapel.addEventListener("click", ()=>{jugar("pepel");    });
+        btnTijera.addEventListener("click", ()=>{jugar("tijera");  });
+
+
+        // Funcion Principal
+
+        function jugar (){
+            const jugadorIA = seleccionDeIA();
+            const resultado = queJugadorGana(jugador, jugadorIA);
+            console.log (`${jugador} ${jugadorIA}`);
+            console.log(resultado);
+            recuento ();    
+            imprimir ();
+        }
+
+        // que obtuvo el ordenador
+        function seleccionDeIA (){
+            const opciones =  ["piedra", "papel", "tijera"];
+            const num= Match.floor(Math.random()* opciones.length);
+            return opciones[num];
+        }
+
+        // quien gano jugador 1 io jugador 2
+
+        function queJugadorGana(j1, j2){
+
+        }
+
+        // imprimir resultado en pantalla
+        function imprimirResultado() {
+
+        }
+
+        function juego(j1, j2) {
+            // caso empate
+            if (j1 == j2) { return "empataste"; }
+            // caso gana jugadro 2
+            if ((j1 === "tijera" && j2 === "papel")
+                (j1 === "piedra" && j2 === "tijera")
+                (j1 === "pepel" && j2 === "piedra")
+            ) {
+                return "ganaste";
+            } else {
+
+                return "perdiste"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
