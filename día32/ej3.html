@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con evento</title>
+
+    <style>
+        #errorNombre { /* Corregido el ID */
+            color: red;
+            display: none; /* Para que no se muestre por defecto */
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" id="formulario"> 
+        <label for="txtNombre">Nombre</label> <!-- Agregado for con el ID correcto -->
+        <input type="text" id="txtNombre" name="txtNombre"> <br /> <!-- Agregado id para que pueda ser seleccionado correctamente -->
+        <div id="errorNombre">El nombre es obligatorio</div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        // Definimos constantes (corregido el comentario)
+        const form = document.querySelector("#formulario");
+        const msgError = document.querySelector("#errorNombre");
+        const txtNombre = document.querySelector("#txtNombre");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Evita el envío del formulario
+            console.log("submit del formulario");
+
+            if (txtNombre.value.trim() === "") { // Corregido "is" por "if"
+                msgError.style.display = "block"; // Corregido backticks por comillas normales
+                alert("error");
+            } else {
+                msgError.style.display = "none"; // Corregido "nome" por "none"
+                alert("OK");
+            }
+        });
+    </script>
+    
+</body>
+</html>
