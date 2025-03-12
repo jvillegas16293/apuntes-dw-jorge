@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Listeners</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        button {
+            width: 160px;
+            height: 55px;
+            font-size: 18px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        
+        #btnCambiarColor {
+            background-color: #4CAF50;
+        }
+
+        #btnRojo {
+            background-color: red;
+        }
+
+        #btnAzul {
+            background-color: blue;
+        }
+
+        .bloque {
+            width: 320px;
+            height: 200px;
+            background-color: gray;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btnCambiarColor">Cambiar Color</button>
+        <button id="btnRojo">Cambiar a Rojo</button>
+        <button id="btnAzul">Cambiar a Azul</button>
+    </div>
+
+    <div class="bloque" id="miBloque">Bloque</div>
+
+    <script>
+        const bloque = document.getElementById("miBloque");
+        const btnColor = document.getElementById("btnCambiarColor");
+        const btnRojo = document.getElementById("btnRojo");
+        const btnAzul = document.getElementById("btnAzul");
+
+        const listaColores = ["red", "blue", "orange", "yellow"];
+        let colorId = 0;
+
+        btnColor.addEventListener("click", cambiarColorSimple);
+        btnAzul.addEventListener("click", () => cambiarColor("blue"));
+        btnRojo.addEventListener("click", () => cambiarColor("red"));
+
+        function cambiarColorSimple() {
+            colorId++;
+            if (colorId == listaColores.length) {
+                colorId = 0;
+            }
+            bloque.style.background = listaColores[colorId];
+        }
+
+        function cambiarColor(color) {
+            bloque.style.background = color;
+        }
+    </script>
+</body>
+</html>
