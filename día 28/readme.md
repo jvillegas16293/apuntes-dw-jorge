@@ -129,7 +129,7 @@ listaLetras.forEach( (letra)=>{
 
 } )
 ```
-## Modificar elemntos ton con FerEach
+## Modificar elemntos Don con FerEach
 
 Si queremos usar le indice podemos leerlo agregando un segundo valor a nuestra función flecha
 

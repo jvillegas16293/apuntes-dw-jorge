@@ -11,7 +11,7 @@
     <button id="registro">Entrar</button>
     <p id="content"></p>
 
-    <script>
+   <script>
         const registro = document.querySelector("#registro");
         registro.addEventListener("click", entrar);
 
@@ -37,6 +37,54 @@
             }
         }
     </script>
+
+<script>
+    // Selecciona el botón con el ID "registro" y lo almacena en la variable "registro"
+    const registro = document.querySelector("#registro");
+
+    // Agrega un evento de escucha al botón "registro" que ejecuta la función "entrar" cuando se hace clic
+    registro.addEventListener("click", entrar);
+
+    // Función que se ejecuta al hacer clic en el botón
+    function entrar() {
+        // Selecciona el campo de entrada de edad con el ID "inputEdad" y lo almacena en "inputEdad"
+        const inputEdad = document.querySelector("#inputEdad");
+
+        // Selecciona el elemento donde se mostrará el mensaje con el ID "content"
+        const mensaje = document.querySelector("#content");
+
+        // Obtiene el valor del campo de entrada, lo convierte a un número entero y lo almacena en "edad"
+        let edad = parseInt(inputEdad.value, 10);
+
+        // Verifica si la conversión a número es válida (es decir, que no sea NaN)
+        if (!isNaN(edad)) {
+            // Comprueba si la edad ingresada es mayor o igual a 18
+            if (edad >= 18) {
+                // Muestra un mensaje de bienvenida en el elemento "content"
+                mensaje.textContent = "Bienvenido a la página";
+                // Cambia el color del texto a verde
+                mensaje.style.color = "green";
+                // Muestra una alerta con el mensaje de bienvenida
+                alert("Bienvenido a la página");
+            } else {
+                // Muestra un mensaje indicando que no puede entrar
+                mensaje.textContent = "No puedes entrar a la página";
+                // Cambia el color del texto a rojo
+                mensaje.style.color = "red";
+                // Muestra una alerta con el mensaje de restricción de acceso
+                alert("No puedes entrar a la página");
+            }
+        } else {
+            // Muestra un mensaje de error si el usuario no ingresa una edad válida
+            mensaje.textContent = "Por favor, ingresa una edad válida.";
+            // Cambia el color del texto a naranja
+            mensaje.style.color = "orange";
+            // Muestra una alerta indicando que debe ingresar un valor numérico válido
+            alert("Por favor, ingresa una edad válida.");
+        }
+    }
+</script>
+
 
 </body>
 </html>

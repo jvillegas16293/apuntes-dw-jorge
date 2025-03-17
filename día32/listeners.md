@@ -1,6 +1,6 @@
 ## Listeners para eventos del usuario
 
-Son fuciones que se ejecutan en respuesta a evertnos específicos que ocurren en el DOM, como por ejemplo clicks, movimientos del mouse, teclas presionadas, teclas levantadas. ect... Para agregar un evwnto usamos `addEventListener(evewnto, funcion)`
+Son fuciones que se ejecutan en respuesta a eventnos específicos que ocurren en el DOM, como por ejemplo clicks, movimientos del mouse, teclas presionadas, teclas levantadas. ect... Para agregar un evwnto usamos `addEventListener(evewnto, funcion)`
 
 ```js
 
