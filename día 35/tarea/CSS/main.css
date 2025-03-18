@@ -1,0 +1,169 @@
+Ir al contenido principal
+Google Classroom
+Classroom
+19-22 Diseño Web con HTML5, CSS3 y JS
+VAL Enero 2025 - Tomás Sánchez (Aula 1 CEI Valencia)
+Inicio
+Calendar
+Cursos en los que te has inscrito
+Tareas pendientes
+E
+Examen Diseño Web con HTML5, CSS3 y JavaScript
+04 ABRIL 2025 | 16:15 – 17:00
+1
+19-22 Diseño Web con HTML5, CSS3 y JS
+VAL Enero 2025 - Tomás Sánchez (Aula 1 CEI Valencia)
+Clases archivadas
+Ajustes
+Actividad 7: Reproductor de Música
+Tomás Sánchez
+•
+19:58 (Última modificación: 20:00)
+100 puntos
+Objetivo del ejercicio
+  
+En este ejercicio, pondrás en práctica tus habilidades en HTML, CSS y JavaScript, trabajando con eventos, manipulación del DOM y arrays. Implementarás una estructura de navegación con y desarrollarás un reproductor de música básico.
+
+Este ejercicio se irá mejorando a lo largo del curso, por lo que es importante que lo estructures bien desde el inicio.
+
+Estructura base del ejercicio 
+
+Se te proporcionará el HTML y CSS que podras analizar y adaptar para desarrollar tu app. Deberás completar la funcionalidad JavaScript en para que las pestañas funcionen correctamente y el reproductor de música pueda interactuar con las canciones.
+
+Nivel 1: Implementación de Tabs con JavaScript  
+
+Agregar la funcionalidad para que al hacer click en una pestaña, se muestre el contenido correspondiente y las demás se oculten.
+La primera pestaña debe mostrarse activa al cargar la página.
+
+Nivel 2: Creación de una lista de canciones con JavaScript  
+
+Crear un array de objetos que contenga al menos 5 canciones con la siguiente estructura:
+const canciones = [
+{ id: 1, titulo: "Canción 1", artista: "Artista 1", imagen: "img1.jpg" },
+{ id: 2, titulo: "Canción 2", artista: "Artista 2", imagen: "img2.jpg" },
+// ...
+];
+
+Generar dinámicamente la lista de canciones en el HTML.
+Cada canción debe mostrarse con su  artista, titulo imagen.
+
+Nivel 3: Interacción con el reproductor de música  
+
+Agregar funcionalidad para que al hacer click en una canción, se muestre la información en el reproductor
+Implementar los botones de Siguiente y Anterio para cambiar entre canciones del array.
+Agregar eventos a los botones de Play y Pausa  (pueden simplemente cambiar un texto o icono indicando el estado).
+
+  Nivel 4: Personalización y mejoras visuales  
+
+Aplicar una tipografía de Google Fonts  (por ejemplo, Montserrat).
+Ajustar el diseño con CSS  para mejorar la apariencia del reproductor.
+Analiza la implementación de transición suave  al cambiar de pestaña. Crea comentarios en tu código explicando como funciona.
+
+Extras (Opcional)  
+Crear un modo oscuro/claro para el reproductor.
+Utiliza variables CSS para los colores de tu App y para la velocidad de las transiciones.
+Permitir que el usuario agregue sus propias canciones al array.
+Entrega de archivos  
+Comprime la carpeta completa con todos los archivos y asegúrate de haber implementado todos los niveles.
+
+index.html
+HTML
+
+main.css
+CSS
+Comentarios de la clase
+Tu trabajo
+Asignado
+Comentarios privados
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+
+}
+
+.tab-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+
+    left: 100%; /* por defecto fuera de pantalla */
+    transition: left 0.3s ease-in-out;
+
+    display:flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%;
+    overflow-y: auto; /*Añadimos scroll vertical, solo cuando es necesario*/
+
+}
+
+.tab-content.active {
+    left: 0;
+    z-index: 2;
+}
+
+
+.bottom-nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 10px 0
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-button.active {
+    background-color: #555;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.player i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #000;
+}
+main.css
+Mostrando main.css.

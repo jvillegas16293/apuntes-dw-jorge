@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pestañas / Tabs</title>
+
+    <style>
+        /* Oculta todos los bloques de contenido por defecto */
+        .bloque {
+            display: none;
+        }
+
+        /* Muestra solo el bloque de contenido activo */
+        .bloque.active {
+            display: block;
+        }
+
+        /* Estiliza la lista de pestañas para que los elementos estén en línea y tengan espacio entre ellos */
+        .tablist {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Estilo para la pestaña activa: se añade un borde rojo en la parte inferior */
+        .tab.active {
+            border-bottom: 2px solid red;
+            border-color: red;
+        }
+
+        /* Cambia el color del texto al pasar el cursor sobre una pestaña */
+        .tab:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pestañas / Tabs</h1>
+
+    <!-- Lista de pestañas -->
+    <ul class="tablist">
+        <li class="tab">Botón 1</li>
+        <li class="tab">Botón 2</li>
+        <li class="tab">Botón 3</li>
+    </ul>
+
+    <!-- Contenido de las pestañas -->
+    <main class="contentlist">
+        <div class="bloque active">Contenido 1</div>
+        <div class="bloque">Contenido 2</div>
+        <div class="bloque">Contenido 3</div>
+    </main>
+
+    <script>
+        // Selecciona el contenedor principal de los bloques de contenido
+        const containerBloques = document.querySelector(".contentlist");
+
+        // Selecciona todos los bloques de contenido dentro del contenedor
+        const listaBloques = containerBloques.querySelectorAll(".bloque");
+
+        // Selecciona todas las pestañas (tabs)
+        const listaTabs = document.querySelectorAll(".tab");
+
+        // Itera sobre cada pestaña y agrega un evento de clic
+        listaTabs.forEach((tab, idx) => {
+            console.log(tab); // Muestra en consola el elemento actual (pestaña)
+            console.log(idx); // Muestra la posición (índice) de la pestaña en la lista
+
+            listaTabs[idx].addEventListener("click", () => {
+                
+                // Recorre todas las pestañas y bloques para quitar la clase .active
+                listaBloques.forEach((bloque, id) => {
+                    listaBloques[id].classList.remove("active"); // Oculta el contenido
+                    listaTabs[id].classList.remove("active"); // Quita el estilo activo de la pestaña
+                });
+
+                // Agrega la clase .active solo a la pestaña y el bloque correspondiente
+                listaBloques[idx].classList.add("active"); // Muestra el contenido correspondiente
+                listaTabs[idx].classList.add("active"); // Resalta la pestaña activa
+            });
+        });
+    </script>
+
+</body>
+
+</html>

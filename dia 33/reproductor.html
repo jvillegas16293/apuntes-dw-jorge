@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Parte 1: Selección de elementos
+const playList = document.getElementById("playlist");
+const controllers = document.querySelector(".controllers");
+const btn3 = controllers.querySelector("#btn3");
+const cancionActual = document.querySelector("#cancionActual");
+
+let idCancion = 1; // ID de la canción en reproducción
+
+// Asegúrate de definir estas listas antes de usarlas
+const listaCanciones = ["Canción 1", "Canción 2", "Canción 3", "Canción 4"];
+const listaArtistas = ["Artista 1", "Artista 2", "Artista 3", "Artista 4"];
+const listaColores = ["#ff5733", "#33ff57", "#3357ff", "#f3f3f3"];
+const listaCover = ["cover1.jpg", "cover2.jpg", "cover3.jpg", "cover4.jpg"];
+
+// Renderizar la playlist
+listaCanciones.forEach((cancion, idx) => {
+    const artista = listaArtistas[idx];
+    const imagen = listaCover[idx];
+
+    // Agregar tarjeta de canción a la playlist
+    playList.innerHTML += `
+        <div class="card" id="${idx}">
+            <img src="${imagen}" alt="Cover de ${cancion}" />
+            <div>
+                <h3>${artista}</h3>
+                <span>${cancion}</span>
+            </div>
+        </div>`;
+});
+
+// Función para cargar la canción en la interfaz
+const handleCargarCancion = () => {
+    const artista = listaArtistas[idCancion];
+    const cancion = listaCanciones[idCancion];
+
+    console.log("El artista es:", artista, " y la canción es:", cancion);
+
+    cancionActual.innerHTML = `
+        <h3>${artista}</h3>
+        <span>${cancion}</span>`;
+};
+
+// Botón para seleccionar canción 3
+btn3.addEventListener("click", () => {
+    idCancion = 3;
+    handleCargarCancion();
+});
+
+// Agregar eventListener a la playlist para detectar clics en las tarjetas
+document.addEventListener("click", (e) => {
+    const elementoClickeado = e.target.closest(".card"); // Encuentra el contenedor .card más cercano
+
+    if (elementoClickeado) {
+        const nuevoId = parseInt(elementoClickeado.id, 10); // Convertir a número
+
+        if (!isNaN(nuevoId)) {
+            idCancion = nuevoId;
+            handleCargarCancion();
+        }
+    }
+});
+
+// Parte 3: Reproducir la canción actual al cargar la página
+handleCargarCancion();
+
+    </script>
+</body>
+</html>
