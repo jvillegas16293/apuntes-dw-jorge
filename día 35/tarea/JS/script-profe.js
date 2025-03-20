@@ -85,5 +85,9 @@ containerCanciones.innerHTML =- `<                <li class="cardCancion">
                     </div>
                 </li>`;
 })
+ 
+const playBtn = document.querySelector("fas fa-play");
+const pauseBtn = document.querySelector("fas fa-pause");
+const nextBtn = document.querySelector("fas fa-step-forward");
+const prevBtn = document.querySelector("fas fa-step-backward");
 
-<script src="./JS/script-profe.js"></script>

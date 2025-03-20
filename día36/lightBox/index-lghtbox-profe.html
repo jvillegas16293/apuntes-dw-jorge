@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightBox</title>
+
+    <link type="text/css" rel="stylesheet" href="./css/lightbox.css" />
+    <link type="text/css" rel="stylesheet" href="./css/reset.css" />
+
+    <script src="./JS/lightbox.js" defer="true"></script>
+</head>
+
+<body>
+
+
+    <ul class="ul">
+        <li class="li">
+            <a class="a" href="#img1" title="imagen numero 1">
+                <img class="img" src="./img/arbol.jpg" alt="imagen numero 1" loading="lazy">
+           <!-- oading lazy, difiera la carga de las imagenes que no se ven en la pantalla --> 
+            </a>
+        </li>
+        <li class="li">
+            <a class="a" href="#img1" title="imagen numero 2">
+                <img class="img" src="./img/beauty.jpg" alt="imagen numero 2">
+            </a>
+        </li>
+        <li class="li">
+            <a class="a" href="#img1" title="imagen numero 1">
+                <img class="img" src="./img/close.jpg" alt="imagen numero 2">
+            </a>
+        </li>
+    </ul>
+
+    <div class="lightbox">
+        <img src="./img/arbol.jpg" alt="imagen numero 1" class="imgBig">
+        <button class="btnClose">Cerrar</button>
+    </div>
+
+
+
+</body>
+
+</html>
