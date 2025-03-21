@@ -1,0 +1,100 @@
+.body {
+
+    /* https://neumorphism.io/#e0e0e0 */
+
+    background-color: #e0e0e0;
+
+
+}
+
+.grd {
+    width: 90%;
+    max-width: 56.25rem;
+    margin: 2rem auto;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+    /* Grid Responsive y automático */
+    gap: 1rem;
+}
+
+.grd .img {
+    background-color: orange;
+    box-shadow: 5rem 5rem 1rem #cecece,
+               -5rem -5rem 1rem #f2f2f2;
+
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.gid .img:hover {
+    transform: scale(.95);
+}
+
+.gid .img:active {
+    transform: scale(1.1);
+
+}
+
+.lightbox{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(2rem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    opacity: 0;
+    pointer-events: none; /*Desactivamos efecto raton en esa etiqueta*/
+    transition: all .5s ease;
+}
+
+.lightbox.isActive{
+    opacity: 1;
+    pointer-events: auto; /* volvera  funcionar el raton en esa etiqueta*/
+}
+
+.lightbox .grande{
+    width: 90%;
+    max-width: 900px;
+    background-color: orange;
+    height: 70vh;
+}
+
+.lightbox .close{
+    width: 3rem;
+    color: white;
+    cursor: pointer;
+    transition:all .5s ease;
+
+}
+
+.lightbox .close:hover{
+    transform: scale(0.95);
+}
+
+.lightbox .close:active{
+    transform: scale(1.1);
+}
+
+.lightbox .svg{
+background-color: orange;
+}
+
+.lightbox .grande{
+    width: 90%;
+    max-width: 900px;
+    height: 80vh;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .4);
+
+
+}

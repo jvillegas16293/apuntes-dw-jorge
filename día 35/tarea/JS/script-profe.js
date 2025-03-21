@@ -84,7 +84,7 @@ containerCanciones.innerHTML =- `<                <li class="cardCancion">
                         <small>Michael Jackson</small>
                     </div>
                 </li>`;
-})
+});
  
 const playBtn = document.querySelector("fas fa-play");
 const pauseBtn = document.querySelector("fas fa-pause");
