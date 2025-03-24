@@ -4,35 +4,49 @@
 
     background-color: #e0e0e0;
 
+    min-height: 100vh;
 
+    display: flex;
+    flex-direction: column; /* Para centrar correctamente */
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.grd {
+.grid {
     width: 90%;
     max-width: 56.25rem;
-    margin: 2rem auto;
+    margin: auto;
     padding: 1rem;
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
     /* Grid Responsive y automático */
     gap: 1rem;
+
+    min-height: 50vh; /* Evita que las imágenes queden pegadas arriba */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.grd .img {
+.grid .img {
+    width: 100%; /* Que ocupe todo el espacio de la celda */
+    aspect-ratio: 1; /* Mantiene las imágenes cuadradas */
     background-color: orange;
-    box-shadow: 5rem 5rem 1rem #cecece,
-               -5rem -5rem 1rem #f2f2f2;
+    box-shadow: 0.5rem 0.5rem 0.5rem #cecece,
+                -0.5rem -0.5rem 0.5rem #f2f2f2; /* Sombras mucho más sutiles */
 
     cursor: pointer;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
-.gid .img:hover {
+.grid .img:hover {
     transform: scale(.95);
 }
 
-.gid .img:active {
+.grid .img:active {
     transform: scale(1.1);
 
 }
