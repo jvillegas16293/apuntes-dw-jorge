@@ -76,6 +76,26 @@ function hacerPedido(plato, callBack){
     }, 3000);
 };
 
+// Otro ejemplo igua más completo
+
+console.log(" 1) solicitar al camarero un plato de ensalada de atún");
+pedirPlato("ensalada de atún");
+console.log("3) la persona se toma el vaso de agua");
+
+function pedirPlato(plato) {
+    console.log("2) el camarero va a buscar el plato de comida: ", plato);
+    fetch("http://restaurante.com/api/traerPlato")
+        .then(response => response.json())
+        .then(datos => {
+            console.log("Paso 4: El camarero lleva el plato de :", datos.plato);
+
+            console.log("Paso 5: El comensal se come su comida");
+        })
+        .catch(error => {
+            console.log("No tenemos mas atún, lo siento");
+        });
+}
+
 // Explicacion lógica:
 https://www.lydiahallie.com/blog/event-loop
 ```

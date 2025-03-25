@@ -51,6 +51,15 @@
             
             <div id="perfiles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Los perfiles se cargarán aquí dinámicamente -->
+                <div class="profile-card">
+                    <img class="profile__img" src="#" alt="Avatar">
+                    <div class="profile__info">
+                        <h2 class="profile__name">${nombre}</h2>
+                        <p class="profile__profesion">${profesion}</p>
+                        <p class="profile__experiencia">Experiencia: ${experiencia} años</p>
+                        <p class="profile__habilidades">Habilidades: ${habilidades.join(', ')}</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -63,6 +72,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./JS/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
