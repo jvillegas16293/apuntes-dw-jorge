@@ -1,0 +1,82 @@
+.parallax-contenedor {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    text-align: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../IMG/flor-blanca.jpg'); /* Corregido */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.parallax-contenido {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    color: wheat;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90vh;
+}
+
+.seccion.normal {
+    min-height: 30vh;
+    padding: 50px;
+    text-align: center;
+    background-color: bisque;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+}
+
+.parallax-elemento-flotante {
+    position: absolute;
+    bottom: 10%;
+    width: 100px;
+    right: 15%;
+    z-index: 2;
+}
+/* Estilos para el elemento flotante que acompaña a oarallax */
+/* Posicion inicial será independiente para cada elemento */
+.parallax-flotante{
+    position: absolute;
+    max-width: 150px;
+    height: auto;
+    z-index: 2;
+    will-change: transform;
+}
+
+#flotante-1 {
+    bottom: 10%;
+    left: 10%;
+    width: 120%
+}
+
+#flotante-2 {
+    bottom: 10%;
+    left: 10%;
+    width: 120%
+}
+
+#flotante-3 {
+    bottom: 10%;
+    left: 10%;
+    width: 120%
+}

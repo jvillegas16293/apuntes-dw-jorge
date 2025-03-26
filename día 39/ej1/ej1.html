@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax ej 1</title>
+
+    <link type="text/css" rel="stylesheet" href="./CSS/parallax.css" />
+
+    <script src="./JS/script-parallax.js" defer></script>
+
+</head>
+
+<body>
+
+    <section class="seccion normal">Contenido normal 1....</section>
+
+    <section class="seccion parallax-contenedor" id="seccion-1">
+
+        <div class="parallax-bg" style="background-image: url(``)"></div>
+
+        <div class="parallax-contenido">
+            <h2>Seccion uno</h2>
+                <p>Este contenido esta sonre el parallax</p>
+                <img src="./IMG/hoja-seca.jpg" alt="imagen hoja seca" class="parallax-flotante" id="flotante-1"
+                    data-parallax-type="moveY, rotate" 
+                    data-parallax-speed="0.2" 
+                    data-parallax-direction="-1"
+                    >
+        </div>
+
+    </section>
+
+    <section class="seccion parallax-contenedor" id="seccion-2">
+
+        <div class="parallax-bg" style="background-image: url(``)"></div>
+
+        <div class="parallax-contenido">
+            <h2>Seccion dos</h2>
+                <p>Este contenido esta sonre el parallax</p>
+                <img src="./IMG/beauty.jpg" alt="imagen hoja seca" class="parallax-flotante" id="flotante-2"
+                    data-parallax-type="moveY, rotate" 
+                    data-parallax-speed="0.6" 
+                    data-parallax-direction="-1"
+                    >
+        </div>
+
+    </section>
+
+    <section class="seccion parallax-contenedor" id="seccion-3">
+
+        <div class="parallax-bg" style="background-image: url(``)"></div>
+
+        <div class="parallax-contenido">
+            <h2>Seccion tres</h2>
+                <p>Este contenido esta sonre el parallax</p>
+                <img src="./IMG/hoja-seca.jpg" alt="imagen hoja seca" class="parallax-flotante" id="flotante-3"
+                    data-parallax-type="moveY, opacity" 
+                    data-parallax-speed="0.3" 
+                    data-parallax-direction="-3"
+                    >
+        </div>
+
+    </section>
+    
+    <section class="seccion normal">Contenido normal 2...</section>
+
+
+
+</body>
+
+</html>
