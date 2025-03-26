@@ -1,32 +1,27 @@
 function ParallaxEffect() {
-
-    const parallaxBg = document.querySelector('.parallax-bg');
-    // Seleccionamos nuestro elemento flotante
-    const elementoFlotante = document.querySelector('.parallax-elemento-flotante');
+    const parallaxBgs = document.querySelectorAll('.parallax-bg'); 
+    const elementosFlotantes = document.querySelectorAll('.parallax-flotante');
 
     window.addEventListener("scroll", () => {
-        let scrollPos = window.scrollY;  // Definimos scrollPos correctamente
-        console.log(scrollPos);
+        let scrollPos = window.scrollY;
 
-        // Mover el fondo a la mitad de la velocidad del scroll (0.3)
-        parallaxBg.style.transform = `translateY(${scrollPos * 0.3}px)`;  // Usando scrollPos correctamente
+        // Aplicar parallax en los fondos
+        parallaxBgs.forEach(bg => {
+            bg.style.transform = `translateY(${scrollPos * 0.3}px)`;
+        });
 
-        if (elementoFlotante) {
-            // Aplicamos una rotación al elemento flotante
-            let rotation = scrollPos * 0.1;  // Usamos scrollPos aquí también
-            
-            // IMPORTANTE: `transform: translateY()` es mejor para el rendimiento que modificar `top`
-            elementoFlotante.style.transform = `translateY(${scrollPos * 0.6}px) rotate(${rotation}deg)`;
-        }
+        // Aplicar parallax en los elementos flotantes
+        elementosFlotantes.forEach(el => {
+            let speed = el.getAttribute("data-speed") || 0.5; // Velocidad por defecto
+            let rotation = scrollPos * 0.1;
+            el.style.transform = `translateY(${scrollPos * speed}px) rotate(${rotation}deg)`;
+        });
     });
 }
 
-if(window.matchMedia(`(prefers-reduced-motion: reduce)`).matches){
-    // No aplicar efects
-    console.log("no aplicar parallax por decision del usuario")
-} else {
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     console.log("Se aplica el parallax");
     ParallaxEffect();
+} else {
+    console.log("No aplicar parallax por decisión del usuario");
 }
-
-
