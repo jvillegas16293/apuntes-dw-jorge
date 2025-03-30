@@ -22,11 +22,17 @@
 /* Elementos de la lista */
 .contenedor .li { 
     padding: 1em;
-    margin: 0 1em 0 0;
+    margin: 0 2em 0 0;
     background-color: #ffffff; /* Fondo blanco para destacar */
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08); /* Sombra ligera */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedor .li.activo {
+    background-color: rgb(243, 179, 61);
+    color: white;
+    transition: all .5s ease;
 }
 
 /* Efecto hover en los elementos de la lista */
@@ -56,6 +62,15 @@
     border-radius: 8px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .5s ease;
+  
+}
+
+.contenedor .bloque.activo {
+    opacity: 1;
+    transform: translateY(0%);
 }
 
 /* Efecto hover en el bloque */

@@ -1,56 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> <!-- Se cambió "en" a "es" para español -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
- .caja{
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    color:white;
-    border: 10px solid black;
-    padding: 10px;
-    margin: 10px;
-}
-</style>
 
-<style>
-´´´css
+    <style>
+        /* Estilos generales para la caja */
+        .caja {
+            width: 200px; /* Ancho de la caja */
+            height: 200px; /* Alto de la caja */
+            background-color: red; /* Color de fondo rojo */
+            color: white; /* Color del texto en blanco */
+            border: 10px solid black; /* Borde sólido negro */
+            padding: 10px; /* Espaciado interno */
+            margin: 10px; /* Margen exterior */
+        }
+    </style>
 
-/* selector de id */
-#caja1{
-color: blue;
-}
-/* selector de etiqueta */
-div{
-color: green;
-}
-/* selector de clase */
-.caja{
-color: red;
-}
-</style>
-<style>
-    /* ESTILOS DE RESETEO */
-    body{
-        
-    }
-</style>
+    <style>
+        /* Selector de ID: Aplica estilos específicos a un elemento con id="caja1" */
+        #caja1 {
+            color: blue; /* Cambia el color del texto a azul */
+        }
+
+        /* Selector de etiqueta: Aplica estilos a todos los elementos <div> */
+        div {
+            color: green; /* Cambia el color del texto a verde */
+        }
+
+        /* Selector de clase: Aplica estilos a todos los elementos con class="caja" */
+        .caja {
+            color: red; /* Cambia el color del texto a rojo */
+        }
+    </style>
+
+    <style>
+        /* ESTILOS DE RESETEO */
+        body {
+            margin: 0; /* Se recomienda resetear el margen del body */
+            padding: 0; /* Se recomienda resetear el padding del body */
+            box-sizing: border-box; /* Asegura que el tamaño de los elementos incluya el padding y el borde */
+        }
+    </style>
 </head>
 <body>
-<div class="caja" id="caja1">soy un div</div>
-     <h1>Box Model</h1>
+
+    <!-- Primer div con la clase "caja" y el ID "caja1" -->
+    <div class="caja" id="caja1">Soy un div</div>
+
+    <h1>Box Model</h1>
+
     <pre>
-        Tienen 4 elementos
-       -contenido
-        -relleno
-        -borde
-        -margen
+        Tiene 4 elementos:
+        - Contenido
+        - Relleno (Padding)
+        - Borde
+        - Margen
     </pre>
+
+    <!-- Segundo div con la clase "caja" -->
     <div class="caja">
         Hola, soy una Caja
     </div>   
+
 </body>
 </html>

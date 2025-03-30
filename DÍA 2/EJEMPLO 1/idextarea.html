@@ -5,53 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os presento a mi mascota</title>
     <style>
+        /* Estilos para la tabla y sus elementos */
         table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
+            border: 1px solid black; /* Borde para la tabla */
+            border-collapse: collapse; /* Colapsa los bordes para un mejor diseño */
         }
+
         th {
-          text-align: left;
-        }
-        #identificador{
-            color:aqua
-        }
-        #colormarron{
-            color:rgb(210, 37, 37)
+            text-align: left; /* Alineación del texto en las celdas de encabezado */
         }
 
-        .mascotass{
-            color:sandybrown
+        /* Estilo para el identificador con color aqua */
+        #identificador {
+            color: aqua;
         }
 
+        /* Estilo para el texto con color marrón */
+        #color-marron { /* Se corrigió el id de "colormarron" a "color-marron" para seguir la nomenclatura recomendada */
+            color: rgb(210, 37, 37);
+        }
 
-
-        </style>
-
+        /* Estilo para la clase que resalta una parte del texto */
+        .mascotas { /* Se corrigió la clase de "mascotass" a "mascotas" para mayor coherencia */
+            color: sandybrown;
+        }
+    </style>
 </head>
 <body>
     <h1>Rula</h1>
-    <img src="./imgs/perrito.jpg" alt="mi mascota">   
-    
-    <p></p>Un perrito pequeño, juguetón y cariñoso, con orejas levantadas y <span id="identificador"> ojos</span> brillantes que reflejan su curiosidad. Su pelaje suave y esponjoso lo <span class="mascotass">perfecto</span> para abrazos tiernos.</p>
-    <p id="colormarron">color marron</p>
-    <table border="2" style="width:100%">
-        <caption>Nombrar la table</caption>
-        <thead>
-            <th>Edad</th>
-            <th>Raza</th>
-            <th>Color</th>
-            <th>Personalidad</th>
-        </tr>        
-        </thead>
-        <tr>
 
-        <tr>
-            <td>7 años</td>
-            <td>Mezcla</td>
-            <td>Marron castaño</td>
-            <td>Jugutón</td>
-        </tr>
+    <!-- Imagen de la mascota -->
+    <img src="./imgs/perrito.jpg" alt="Mi mascota">   
+
+    <!-- Descripción de la mascota con un error corregido en la estructura del párrafo -->
+    <p>Un perrito pequeño, juguetón y cariñoso, con orejas levantadas y  
+       <span id="identificador">ojos</span> brillantes que reflejan su curiosidad.  
+       Su pelaje suave y esponjoso lo hace <span class="mascotas">perfecto</span> para abrazos tiernos.
+    </p>
+
+    <!-- Texto con color marrón -->
+    <p id="color-marron">Color marrón</p>
+
+    <!-- Primera tabla con información de la mascota -->
+    <table style="width:100%">
+        <caption>Información de la mascota</caption>
+        <thead>
+            <tr> <!-- Se corrigió la estructura del thead, antes faltaba la etiqueta <tr> de apertura -->
+                <th>Edad</th>
+                <th>Raza</th>
+                <th>Color</th>
+                <th>Personalidad</th>
+            </tr>        
+        </thead>
+        <tbody>
+            <tr>
+                <td>7 años</td>
+                <td>Mezcla</td>
+                <td>Marrón castaño</td>
+                <td>Juguetón</td> <!-- Se corrigió la palabra "Jugutón" a "Juguetón" -->
+            </tr>
+        </tbody>
     </table>
+
+    <!-- Segunda tabla con actividades favoritas de la mascota -->
     <table border="2" width="100px" height="100px">
         <tr>
             <th>1</th>
@@ -65,7 +81,10 @@
         </tr>
     </table>
 
-    <button onclick="alert(clikkkkk)>Hazme clic</button> 
-    Los botones se hacen mediante CSS.
+    <!-- Botón con un error corregido en la sintaxis -->
+    <button onclick="alert('¡Clic!')">Hazme clic</button>  
+    <!-- Se corrigió el error de comillas en el atributo onclick y se cambió el mensaje a algo más claro -->
+
+    <p>Los botones se hacen mediante CSS.</p>
 </body>
 </html>

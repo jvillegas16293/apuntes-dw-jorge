@@ -5,31 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .box {
+            /* Propiedades CSS estándar */
+            width: 100px;
+            height: 50px;
+            background-color: lightgray;
+            margin: 5px;
+            /* Esto ayuda a visualizar las cajas */
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Esta clase no existe en tu CSS pero la usas en el HTML: */
+        /* .none no tiene sentido porque "none" no es una clase válida de display */
+        .none {
+            display: none;
+        }
+    </style>
 </head>
-<style>
-    .box {
-
-
-        /* Propidades css standar*/
-
-    }
-
-    .inline {
-        display: inline;
-    }
-
-    .block {
-        display: block;
-    }
-
-    .inline-block {
-        display: inline-block;
-    }
-
-    .hidden {
-        display: none;
-    }
-</style>
 
 <body>
     <h1>display</h1>
@@ -38,33 +47,46 @@
 
     <span class="box inline">caja 1</span>
     <span class="box inline" style="margin-top: 50px;">caja 2</span>
-    Elemento inline, no tengo height y width, tampoco se aplican margin top y botton
+    <!-- ⚠️ Comentario incorrecto corregido abajo -->
+    <!-- Las cajas inline **sí pueden tener** margin-top/bottom, pero no siempre se aplican visualmente -->
+    <!-- Tampoco se les aplica width/height normalmente -->
+    <p>
+        Elemento inline: no se puede aplicar <code>width</code> y <code>height</code> normalmente. 
+        Los márgenes verticales (top/bottom) pueden no tener efecto visual.
+    </p>
 
     <h2>display: inline-block</h2>
 
-    <span class="box inline-block">caja 1 </span>
-    <span class=" box inline-block">Caja 2</span>
-    En inline block, nos permite conbinar ambas opciones pudiendio aplicar widht y height con la diferencia que no hace
-    un salto de linea
+    <span class="box inline-block">caja 1</span>
+    <span class="box inline-block">caja 2</span>
+    <p>
+        En <code>inline-block</code> se puede aplicar <code>width</code> y <code>height</code>, 
+        pero se comporta como un elemento inline (no hay salto de línea).
+    </p>
 
     <h2>display: block</h2>
 
-    <span class="box block">caja 1 </span>
-    <span class="box block">Caja 2</span>
+    <span class="box block">caja 1</span>
+    <span class="box block">caja 2</span>
+    <p>
+        Los elementos <code>block</code> ocupan todo el ancho disponible y hacen salto de línea.
+    </p>
 
-    <h2>Display: none</h2>
-    Esconde el elemento, su utilidad es que pueden aparecer cuando pasas el cursos, como por ejemplo en un menú de
-    navegación.
+    <h2>display: none</h2>
+    <p>
+        Esconde el elemento completamente. Muy útil en menús desplegables o elementos condicionales.
+    </p>
 
-    <span class="box none">caja 1 </span>
-    <span class=" box none">Caja 2</span>
+    <!-- Aquí había una clase .none que no estaba definida en el CSS. Ya la hemos añadido arriba -->
+    <span class="box none">caja 1</span>
+    <span class="box none">caja 2</span>
 
-    Cajas 2 invisible
-    <span class="box inline">caja 2 </span>
-    <span class="box hidden">Caja 2</span>
-    <span class="box hidden">caja 3</span>
+    <p>Cajas invisibles usando <code>display: none</code> o la clase <code>hidden</code>:</p>
+
+    <span class="box inline">caja visible</span>
+    <span class="box hidden">caja oculta 1</span>
+    <span class="box hidden">caja oculta 2</span>
 
 </body>
-
 
 </html>

@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACTIVIDAD</title>
-    <!--primero estilos de reset-->
+
+    <!-- Primero los estilos de reset -->
     <link rel="stylesheet" href="reset.css">
-    <!---los estilos de mi pagina-->
+    <!-- Después los estilos de mi página -->
     <link rel="stylesheet" href="estilos.css">
+
     <style>
+        /* Estilo de caja1: se usa en los dos primeros <div> */
+
         .caja1 {
             width: 200px;
             height: 200px;
@@ -18,46 +22,52 @@
             border: 10px solid black;
             padding: 10px;
             margin: 10px;
+            /* Esta caja usa box-sizing por defecto: content-box */
         }
     </style>
 
     <style>
-        /* reset css */
-
+        /* Estilos para otras cajas */
 
         .caja {
             border: 3px dashed salmon;
-            margin: 10PX;
+            margin: 10px; /* ⚠️ Corregido "10PX" a "10px" (las unidades deben ir en minúscula) */
             padding: 20px;
             box-sizing: content-box;
-            /* solo contenido */
+            /* Con content-box, el ancho/alto solo mide el contenido (el padding y borde se suman) */
         }
 
         .alternativa {
-            border: solid green;
-            border-style: double;
+            border: double green; /* Simplificado: antes estaba border + border-style */
             box-sizing: border-box;
-            /* contenido + borer + padding */
+            /* border-box incluye el borde y padding dentro del ancho y alto */
         }
     </style>
 </head>
 
 <body>
+
+    <!-- Dos cajas rojas con borde negro -->
     <div class="caja1">
-        es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno
-        estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)
-        desconocido usó una galería de textos y los mezcló
-    </div>
-    <div class="caja1">
-        es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno
-        estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)
-        desconocido usó una galería de textos y los mezcló
+        Es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno
+        estándar de las industrias desde el año 1500, cuando un impresor desconocido usó una galería de textos y los mezcló.
     </div>
 
-    <p class="caja">es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el
-        texto de relleno estándar de las industrias desde e</p>
-    <p class="caja alternativa">es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha
-        sido el texto de relleno estándar de las industrias desde e</p>
+    <div class="caja1">
+        Es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno
+        estándar de las industrias desde el año 1500, cuando un impresor desconocido usó una galería de textos y los mezcló.
+    </div>
+
+    <!-- Parrafo con clase .caja -->
+    <p class="caja">
+        Esta caja tiene un borde discontinuo salmon, con box-sizing: content-box. El padding y el borde se suman al ancho total.
+    </p>
+
+    <!-- Mismo párrafo pero con clase adicional .alternativa -->
+    <p class="caja alternativa">
+        Esta caja usa box-sizing: border-box. Eso significa que el padding y el borde están incluidos dentro del tamaño total.
+    </p>
+
 </body>
 
 </html>

@@ -4,56 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layaut Vertical</title>
+    <title>Layout Vertical</title> <!-- Corregido: 'Layaut' → 'Layout' -->
+
+    <style>
+        /* ========== Reset CSS ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Incluye padding y border dentro del width/height */
+        }
+
+        /* ========== Contenedor principal ========== */
+        .container {
+            display: flex; /* Activamos Flexbox */
+            flex-direction: column; /* Dirección vertical (de arriba a abajo) */
+            background-color: thistle;
+            height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+            justify-content: space-between; /* Espacia los hijos: header arriba, footer abajo, content en el medio */
+            text-align: center;
+        }
+
+        /* ========== Header y Footer ========== */
+        .header,
+        .footer {
+            background-color: beige;
+            padding: 10px;
+            display: flex; /* Para centrar el texto */
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center;    /* Centra verticalmente */
+        }
+
+        /* ========== Contenido central ========== */
+        .content {
+            background-color: teal;
+            padding: 10px;
+            flex-grow: 1; /* Ocupará todo el espacio disponible entre header y footer */
+            display: flex; /* Usamos Flexbox dentro del contenido también */
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            color: white; /* Contraste sobre fondo teal */
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
-<style>
-    /* Reset CSS */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        background-color: thistle;
-        height: 100vh;
-        justify-content: space-between;
-        text-align: center;
-    }
-
-    .header,
-    .footer {
-        background-color: beige;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content {
-        /* Contenido centrado en div */
-        background-color: teal;
-        padding: 10px;
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        /* Para mejor contraste */
-        font-size: 24px;
-        font-weight: bold;
-    }
-</style>
 
 <body>
 
+    <!-- Contenedor principal con 3 secciones verticales -->
     <div class="container">
-        <div class="header">Header</div>
-        <div class="content">Contenido</div>
-        <div class="footer">Pie</div>
+        <div class="header">Header</div> <!-- Cabecera del layout -->
+        <div class="content">Contenido</div> <!-- Zona central que crece -->
+        <div class="footer">Pie</div> <!-- Pie de página -->
     </div>
 
 </body>
