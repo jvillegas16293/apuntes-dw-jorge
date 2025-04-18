@@ -78,29 +78,35 @@
     <div class="bloque" id="miBloque">Bloque</div>
 
     <script>
-        const bloque = document.getElementById("miBloque");
-        const btnColor = document.getElementById("btnCambiarColor");
-        const btnRojo = document.getElementById("btnRojo");
-        const btnAzul = document.getElementById("btnAzul");
-
-        const listaColores = ["red", "blue", "orange", "yellow"];
-        let colorId = 0;
-
-        btnColor.addEventListener("click", cambiarColorSimple);
-        btnAzul.addEventListener("click", () => cambiarColor("blue"));
-        btnRojo.addEventListener("click", () => cambiarColor("red"));
-
+        // Selección de elementos del DOM
+        const bloque = document.getElementById("miBloque"); // Se obtiene el elemento con id "miBloque" que será el que cambia de color
+        const btnColor = document.getElementById("btnCambiarColor"); // Se obtiene el botón para cambiar el color de forma secuencial
+        const btnRojo = document.getElementById("btnRojo"); // Se obtiene el botón para cambiar el color a rojo
+        const btnAzul = document.getElementById("btnAzul"); // Se obtiene el botón para cambiar el color a azul
+    
+        // Lista de colores para aplicar al bloque
+        const listaColores = ["red", "blue", "orange", "yellow"]; // Se define una lista de colores que se cambiarán al bloque
+        let colorId = 0; // Variable que mantiene el índice del color actual en la lista
+    
+        // Asignación de event listeners (escuchadores de eventos) para los botones
+        btnColor.addEventListener("click", cambiarColorSimple); // Cuando se haga click en btnColor, se ejecuta la función cambiarColorSimple
+        btnAzul.addEventListener("click", () => cambiarColor("blue")); // Al hacer click en btnAzul, el color del bloque se cambia a azul
+        btnRojo.addEventListener("click", () => cambiarColor("red")); // Al hacer click en btnRojo, el color del bloque se cambia a rojo
+    
+        // Función que cambia el color del bloque de manera secuencial
         function cambiarColorSimple() {
-            colorId++;
-            if (colorId == listaColores.length) {
-                colorId = 0;
+            colorId++; // Aumenta el índice del color en cada click
+            if (colorId == listaColores.length) { // Si el índice alcanza el tamaño de la lista de colores
+                colorId = 0; // Vuelve al principio de la lista
             }
-            bloque.style.background = listaColores[colorId];
+            bloque.style.background = listaColores[colorId]; // Cambia el color de fondo del bloque al color correspondiente en la lista
         }
-
+    
+        // Función que cambia el color del bloque a un color específico
         function cambiarColor(color) {
-            bloque.style.background = color;
+            bloque.style.background = color; // Cambia el color de fondo del bloque al color especificado
         }
     </script>
+    
 </body>
 </html>

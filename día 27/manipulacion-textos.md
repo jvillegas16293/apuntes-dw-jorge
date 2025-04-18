@@ -1,142 +1,134 @@
-## Manipulacion de textos
+# Manipulación de textos en JavaScript
 
-1. Concatenación
+## 1. Concatenación
 
 ```js
+const nombre = "Lucia";
+const apellido = "Perez";
 
-const  nombre="lucia";
-const apellido="perez";
+// Concatenación con el operador +
+const nombreCompleto = nombre + " " + apellido; // "Lucia Perez"
+console.log(nombreCompleto);
 
-const nombreCompleto = nombra+" "+pellido // Lucia Perez
+// Error corregido en la variable 'mensaje'
+const edad = 25;
+const mensaje = (edad + 1) + " años"; // "26 años"
+console.log(mensaje);
 
-cons mensaje = edad + 1; // 26
-const mensaje = edad + 1 + " años"; // 251 años
-const mensaje = (edad + 1) + " años";
-
-// Concatenar usando +=
-
-let saludo= "hola, ";
-saludo += "¿Cómo estas?";
-console.log(saludo); // guarda Hola ¿Como estas? AGgrrga nuevos elementos a los elementos ya existentes 
-
+// Concatenación usando +=
+let saludo = "Hola, ";
+saludo += "¿Cómo estás?";
+console.log(saludo); // "Hola, ¿Cómo estás?"
 ```
 
-2. Interpolación
-
-Cuando usamos plantillas literales (template literals / template Strings), se pueden insertar "variables" o "expresiones" dentro de una cadena de texto usando "&{}"
+## 2. Interpolación (Template Literals)
 
 ```js
-let nombre ="Ana"
-let edad ="25"
+let nombre2 = "Ana";
+let edad2 = 25;
 
-// interpolación
+// Uso de template literals
+let mensaje2 = `Hola, mi nombre es ${nombre2} y tengo ${edad2} años`;
+console.log(mensaje2);
 
-let mensaje=`Hola, mi nombre es ${nombre} y tengo ${edad} años`;
+// Inserción de expresiones dentro de template literals
+const total = 50;
+const iva = 0.21;
+console.log(`El total con impuestos es ${total + (total * iva)}`);
 
-// insertar expresión
-
-const total=50;
-const iva=0.21;
-console.log (`el total con imuesto es ${total + (total*ina)}`);
-
-const FullName= `${nombre}, ${apellido}`;
-
-
-const hobbies = ["futbl", "basket", "baloncesto"]
-
-const texto="el total como impuestos"; // esto no deja de ser una lista de letras
-
+const fullName = `${nombre2} ${apellido}`;
+console.log(fullName);
 ```
 
-3. Métodos o funciones que podemos aplicar a las strings o listas
-
-JS nos ofrece multiples métodos/funciones para manipular cadenas de texto
-
-- `toUpperCase()` y `toLowerCase()`
-
-- `split()`
-
-- `slice()` // porcion
-
-- `replace()` / `replaceAll()`
-
-- `trim` // Elimina todos los espacios en blanco al inicio y al fin de la cadena
-
-- `includes()`
-
-- `sartsWidth()` y `endsWidth()` // Verifica su una cadena comienza o termina con una seb cadena especíofica
-
-- `repeat()` // repite una cadena un número específico de veces.
+## 3. Métodos para manipular strings
 
 ```js
+let texto = "Me encanta JavaScript";
 
-let texto = "me encanta js"
+// Convertir a minúsculas y mayúsculas
+console.log(texto.toLowerCase()); // "me encanta javascript"
+console.log(texto.toUpperCase()); // "ME ENCANTA JAVASCRIPT"
+```
 
-console.log(texto.tolowerCase()); // me encanta js
-console.log(texto.toUpperCase()); // ME ENCANTA JS
+- `toUpperCase()` - Convierte toda la cadena a mayúsculas.
+- `toLowerCase()` - Convierte toda la cadena a minúsculas.
 
-const palabras= texto.split(" ")
-console.log(palabras); // "me" "encanta" "js"
+```js
+// Dividir una cadena en un array
+const palabras = texto.split(" "); // Divide por espacios
+console.log(palabras); // ["Me", "encanta", "JavaScript"]
+```
 
-const palabras= texto.split("a") // para cuendo en la frase encuentra una a y vs diguiendo hasta la siguiente letra a
-console.log(palabras); // "me enc" "nt"
-console.log(palabras[1]); // se imprime nt
+- `split(separador)` - Divide una cadena en un array de subcadenas, usando el separador especificado.
 
-const palabras2 = texto.split(" encanta ");
-console.log(palabras2);  // "me" "js"
+```js
+// Uso de slice para extraer partes de una cadena
+let frase = "Aprender JavaScript es divertido";
+console.log("Parte de la frase: ", frase.slice(9, 19)); // "JavaScript"
+console.log(frase.slice(9)); // Desde la posición 9 hasta el final
+console.log("Primeras 10 letras: ", frase.slice(0, 10));
+```
 
-const email="maria@alumnos.cei.es"
-const separacion = email.split("@")
-console.log(separacion); // "maria", "alumnos.cer.es
+- `slice(inicio, fin)` - Extrae una porción de la cadena desde el índice de inicio hasta el índice de fin.
 
+```js
+// Reemplazo de palabras en strings
+let frase2 = "Hola mundo. Hola universo.";
+console.log(frase2.replace("Hola", "hola")); // Reemplaza solo la primera ocurrencia
+console.log(frase2.replaceAll("Hola", "hola")); // Reemplaza todas las ocurrencias
+```
 
-let frase= "aprender js es dvertido"
-console.log("parte de la frase; ", frase.slide(9,19)); // me quedo lo que hay dento de esas dos posciones de letras
-console.log(frase.slide(9)); // desde la poscion 9 hacia delante
-console.log("primeras 10 letras", frase.slide(0, 10)); // primeras 10 letras
+- `replace(valor, nuevoValor)` - Reemplaza la primera aparición de 'valor' por 'nuevoValor'.
+- `replaceAll(valor, nuevoValor)` - Reemplaza todas las apariciones de 'valor' por 'nuevoValor'.
 
-// Esto se utiliza mucho para en el fee de post listados del blog solo se ve un determinado número de palabras
+```js
+// Eliminar espacios en blanco al inicio y al final
+let frase3 = "    Hola nombre    ";
+console.log(frase3.trim()); // "Hola nombre"
+```
 
+- `trim()` - Elimina los espacios en blanco al inicio y al final de una cadena.
 
-let frase = "hola mundo. hola hola hola hola universo"
-console.log("remplazar hola por Hola", frase.replace("hola", "Hola")) // la primera que encuentre la reempleza por h mayuscula. cambia 1º que encuentre.
+```js
+// Verificar si una cadena contiene otra
+let frase4 = "El sol brilla en el cielo";
+console.log(frase4.includes("sol")); // true
+console.log(frase4.includes("luna")); // false
+```
 
+- `includes(valor)` - Devuelve true si la cadena contiene 'valor', de lo contrario, false.
 
+```js
+// Verificar si una cadena empieza o termina con otra cadena
+let frase5 = "JavaScript es genial";
+console.log(frase5.startsWith("Java")); // true
+console.log(frase5.endsWith("genial")); // true
+```
 
-let frase="             hola nombre                 "
-console.log(frase.trim()); // hola nombre
+- `startsWith(valor)` - Devuelve true si la cadena comienza con 'valor'.
+- `endsWith(valor)` - Devuelve true si la cadena termina con 'valor'.
 
-// Saca los espaciones extra del inicio y del final. Se utiliza mucho en los formularios etiqueta <textareas> y form
+```js
+// Repetir una cadena un número de veces
+let palabra = "Hola ";
+console.log(palabra.repeat(3)); // "Hola Hola Hola "
+```
 
-let frase="el sol brilla en el cilo"
-console.log(frase.includes("sol")) // true
-console.log(frase.includes("luna")) // false
+- `repeat(n)` - Repite la cadena 'n' veces.
 
-// starsWidth y endsWidth
+## 4. Recorrer una lista (array)
 
-let frase="javascript es genial"
+```js
+const hobbiesArray = ["fútbol", "programar", "leer"];
 
-console.log("¿Empieza coin java" frase.starsWidth("java")); // true
-console.log( frese.starsWidth("java")): // False
-console.log(frase.endsWidth("genial")); // True
+// Obtener la cantidad de elementos en el array
+const cantidad = hobbiesArray.length;
+console.log("Cantidad de hobbies:", cantidad);
 
-//------------------RRECORRER UNA LISTA----------------------------------//
+// Acceder a elementos específicos
+console.log("Primer hobby:", hobbiesArray[0]);
 
-// Declaración de un array llamado 'hobbies' que almacena tres cadenas de texto
-const hobbies = ["futbol", "programar", "leer"];
-
-// Propiedad 'length': Devuelve la cantidad de elementos en el array
-const cant = hobbies.length;
-console.log("Cantidad de hobbies:", cant);
-
-// Acceso a un elemento específico del array por su índice (el primer elemento está en la posición 0)
-console.log("Primer hobby:", hobbies[0]);
-
-// Bucle 'for': Se usa para recorrer el array elemento por elemento
-for (let i = 0; i < hobbies.length; i++) {  
-    // 'i' es la variable de control que representa el índice actual del array
-    console.log("Índice i:", i); 
-
-    // Acceso al elemento actual del array usando 'hobbies[i]'
-    console.log("Hobby en la posición " + i + ":", hobbies[i]); 
+// Recorrer el array con un bucle for
+for (let i = 0; i < hobbiesArray.length; i++) {
+    console.log(`Índice ${i}:`, hobbiesArray[i]);
 }

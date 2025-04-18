@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Extraer Iniciales</title>
 </head>
 <body>
 
-    <p id="nombre">Jorge Villegas Gonzalez <span id="iniciales"></span></p>
+    <p id="nombreCompleto">Juan Pérez <span id="iniciales"></span></p>
 
     <script>
+        // Obtener el párrafo y el span donde se mostrarán las iniciales
+        const parrafo = document.getElementById("nombreCompleto");
+        const span = document.getElementById("iniciales");
 
+        // Extraer el texto sin incluir el span
+        let textoNombre = parrafo.childNodes[0].nodeValue.trim();
 
+        // Dividir el texto en palabras y obtener la primera letra de cada una
+        let palabras = textoNombre.split(" ");
+        let iniciales = palabras.map(palabra => palabra.slice(0, 1).toUpperCase()).join("");
 
-
-
+        // Insertar las iniciales en el span
+        span.textContent = ` (${iniciales})`;
     </script>
-    
+
 </body>
 </html>

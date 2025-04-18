@@ -147,13 +147,21 @@ console.log.ListaLetras ()
 ```
 
 ```js
+// Declaramos un array llamado 'listaLetras' que contiene tres elementos de tipo string
 const listaLetras = ["a", "b", "c"];
 
-listaLetras.forEach( (letra, indice)=>{
-    console.log(letra, indice);
-    listaLetras[indice] = letra.toUpperCase();
+// Usamos el método forEach para recorrer cada elemento del array
+listaLetras.forEach((letra, indice) => {
+    // Imprimimos en la consola cada letra junto con su índice dentro del array
+    console.log(letra, indice); // Output: "a 0", "b 1", "c 2"
 
-} )
+    // Convertimos la letra actual a mayúscula y la guardamos en la misma posición del array
+    listaLetras[indice] = letra.toUpperCase();
+});
+
+// Ahora, 'listaLetras' ha sido modificada y contiene ["A", "B", "C"]
+console.log(listaLetras); // Output: ["A", "B", "C"]
+
 
 console.log(listaLetras);
 ```

@@ -19,8 +19,8 @@
         const divRes = document.querySelector("#resultado");
         const palabrasOfensivas = ["gatito", "perrito", "tortuga"]; 
 
-        textArea.addEventListener("keyup", () => { // Corregido "addEvenlistener" a "addEventListener"
-            // leer datos
+        textArea.addEventListener("keyup", () => { 
+            // leer datos se optine el contenido del textarea
             let texto = textArea.value;
             // procesamos
             for (let i = 0; i < palabrasOfensivas.length; i++) { 

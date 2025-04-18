@@ -1,6 +1,6 @@
 ### MÉTODOS DE ARRAYS -> AGEGAR O QUITAR ALGO A LAS LISTAS
 
-# Pos()
+# Pop()
 
 El método `Pop()`. elimina el ultimo elemento de una array, y lo devuelve.
 Este metodo modifica la longitud de la array.
@@ -18,7 +18,7 @@ console.log(ultimoElemento);
 
 ## Push()
 
-El método pusk, es una de los mas comunes, añade uno o mas elementos al final de una array.
+El método push, es una de los mas comunes, añade uno o mas elementos al final de una array.
 Me devuelve la nueva longitud del array.
 
 ```js

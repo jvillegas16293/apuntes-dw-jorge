@@ -1,177 +1,161 @@
-
-
 ### GRID CSS
 
-- GRID es un sistema de aquetacion bidimensional, para crear interfaces ylayauts tipo tablas.
+CSS Grid es un sistema de maquetación bidimensional que permite crear interfaces y diseños tipo tabla de manera flexible y eficiente.
+
+#### Características de CSS Grid
 
 - Se compone de filas y columnas.
+- Permite anidar grids dentro de otros.
+- Facilita la creación de diseños complejos con pocas líneas de código.
+- No es un reemplazo de Flexbox, sino que se pueden combinar (Grid no sustituye a `<table>` para datos tabulares, pero sí para la creación de layouts).
 
-- Se pueden anidar unos dentro de otros.
+### Creando un Grid en CSS
 
-- Se pueden crear layauts complejos con pocas líneas de código.
+Utilizamos `display: grid;` para definir un contenedor como grid y `grid-template-rows` y `grid-template-columns` para definir filas y columnas.
 
-- No es apuesto a flex, se pueden combinar entre ellos (grid no reemplaza flex, pero si sustituye a las <tables> para la creacion de layauts)
-
-
-Utilizamos ´"display:grid" pare crear un gredd y "grid-temlate-rows" para definir columnas y filas.
-
-´´´CSS
-
+```css
 .container {
-
     display: grid;
-    grid-template-columns 100px 100px 100px
-    grid-template-rows 100px 100px 100px
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
 }
+```
 
-Podemos indicar a cada item, donde posicionarlo utilizando 
+### Posicionamiento de los elementos
 
-- grid-row-start
-- grid-row-end
-- grid-colum-start
+Podemos indicar a cada elemento en el grid dónde posicionarse utilizando:
 
-**Teniendo en cuenta que las filas y columnas empiezan en 1 no en 0
+- `grid-row-start`
+- `grid-row-end`
+- `grid-column-start`
+- `grid-column-end`
 
-Si queremos que ocupe 3 columnas y 1 fila, debemos indicar que comience en la col 1 y termine en la col 4. Y que la fila comience en la 1 y terine en la 2
+**Las filas y columnas comienzan en 1, no en 0.**
 
-´´´CSS
+Si queremos que un elemento ocupe 3 columnas y 1 fila, indicamos:
 
-/*Item de 3 col y una fila*/
+```css
+.item-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+```
 
-        .item-1 {
+### Uso de valores negativos
 
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-column-start: 32
-            grid-column-end: 1;
-        }
+Podemos usar valores negativos para seleccionar elementos desde el final del grid.
 
-Se pueden utilizar valos negativos para releccinar elmentos desde el final del grid
+```css
+.item-2 {
+    grid-column-start: -3;
+    grid-column-end: -1;
+}
+```
 
-        .item-1 {
+### Uso de `span` para definir tamaños
 
-            grid-column-start: -1;
-            grid-column-end: -1;
-            grid-column-start: -1;
-            grid-column-end: -1;
-        }
+En lugar de especificar una columna o fila de destino, podemos usar `span` para indicar cuántas filas o columnas debe ocupar un elemento.
 
-En vez de seleccionar la fila o columna de destino, podemos utilizar <span> para indicar cuantas filas o clumnas queremos un item
+```css
+.item-3 {
+    grid-column-start: 1;
+    grid-column-end: span 2; /* Se amplía en 2 columnas */
+    grid-row-start: 1;
+    grid-row-end: span 3; /* Se amplía en 3 filas */
+}
+```
 
+### Sintaxis abreviada para definir posición
 
-       .item-1 {
+Podemos reducir `grid-column-start` y `grid-column-end` en una sola línea usando `grid-column` y `grid-row`.
 
-            grid-column-start: 1;
-            grid-column-end:  span 2; Se amplia un bloque mas
-            grid-row-start:  span 3; Se ampli dos bloques mas
-            grid-row-end: 1;
-        }
+```css
+.item-4 {
+    grid-column: 1 / 3;
+    grid-row: span 2 / 4;
+}
+```
 
+También podemos usar `grid-area` para una definición aún más corta:
 
-        
-       .item-1 {
+```css
+.item-5 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+```
 
-            grid-column-start: 1;
-            grid-column-end:  span 3; Se amplia un bloque mas
-            grid-row-start:  1; Se ampli dos bloques mas
-            grid-row-end: span 3;
-        }
- todo cubierto
+### Espaciado entre filas y columnas
 
-        .item-1 {
+Podemos usar `grid-gap` (o `gap` en versiones modernas) para definir el espacio entre filas y columnas.
 
-            grid-column-start: 2;
-            grid-column-end:  span 2;
-            grid-row-start:  2; 
-            grid-row-end: span 2;
-        }
-Para reducir grid-column-star y grid-colum-end en una sola linea, podemos usar grid-column y grid-row
-
-        .item-2 {
-
-            grid-column: 1 / 3
-            grid-row  span 2 / 4
-
-        }
-
-Podemos una forma mas corta utilizando grid-area
-
-        grid-row-start, grid-colum-start,  grid-row-end, grid-colum-end
-
-                .item-2 {
-
-                    grid; 1 /1 / 3 / 3
-
-        }
-
-        Con  grid es mu simple crear un elemento por encima de otro.
-
-Podemos utilizar en el container grid-gap para definir un espacion entre las columnas y filas. El mismo sporta un valor para fila y columna, o 2 valores para diferenciarlos. Esta regla es para container.
-
+```css
 .container {
-
     display: grid;
-    grid-template-columns 100px 100px 100px
-    grid-template-rows 100px 100px 100px
-    grid-gap: 10px separador filas y columnas
-    grid-gap: 1em 3em separacion independiente para filas y clumnas
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px; /* Espaciado entre filas y columnas */
+    gap: 1em 3em; /* Diferente espaciado para filas y columnas */
 }
+```
 
-Existe la opcion repeat() que nos permite repitir el numero de veces que quiero para una fila o clumna, esta regla es para container.
+### Uso de `repeat()`
 
-´´´CSS
+`repeat()` nos permite repetir un valor un número determinado de veces.
 
-
+```css
 .container {
-
-    display: grid;
-    grid-template-columns: repeat(3, 100px)
-    grid-template-rows 100px 100px 100px
-    grid-gap: 10px separador filas y columnas
-
-  
-}
-
-
-Si agregas mas bloques dentro de nuestro grid, se intentara ubicarlo en la primera posicion libre disponible, si no quedan posiciones libres se creará una nueva fila. Esta nuva celda que acabo de crear no tendran el tamaño aisgna en nuestro grid-template, y se llaman "grid-implicitas". Podemos usar grid-auto-ros para defirnir el tamño de nuestras nuevas filas.
-
-.container {
-
-    display: grid;
-    grid-template-columns: repeat(3, 100px)
-    grid-template-rows 100px 100px 100px
-    grid-gap: 10px separador filas y columnas
-    grid-auto-rows: 100px las nuevas filas creadas tendra 100px
-
-  
-}
-
-Tambie nexiste el grid-auto-flow que nos permite definir si las nuevas celdas se crearan cmo filas o columnas.
-
-.container {
-
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows 100px 100px 100px
-    grid-gap: 10px; separador filas y columnas
-    grid-auto-rows: 100px; las nuevas filas creadas tendra 100px
-    grid-auto-flow: colum;
-  
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
 }
+```
 
-Las unidades que podemso utilizar, spn, px, %, em, rem, pero se la suma una nueva de valor fraccional, fr. Esta valor, nos permite fraccionar el tamaño disponible.
+### Creación de nuevas filas automáticas (`grid-auto-rows`)
 
-Por ejemplo, si tenemos 3 columnas y definimos que la primer clumna teng aun tamaño de 1fr, la segunda de 2fr y la tercera de 1fr, la segunda columna ocupara el doble de espacion qeu las otras dos.
+Si agregamos más elementos de los que permite el grid, se crearán filas adicionales llamadas "grid implícito". Podemos definir el tamaño de estas nuevas filas con `grid-auto-rows`.
 
-layaut de col de el medio ocupa 2x
-
+```css
 .container {
-
     display: grid;
-    grid-template-columns: 1fr 2fr 3fr;
-    grid-template-rows 100px 100px 100px
-    grid-gap: 10px; separador filas y columnas
-
-  
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    grid-auto-rows: 100px; /* Las nuevas filas creadas tendrán 100px */
 }
+```
 
+### Control de flujo automático (`grid-auto-flow`)
+
+Podemos definir si las nuevas celdas se crearán como filas o columnas con `grid-auto-flow`.
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    grid-auto-rows: 100px;
+    grid-auto-flow: column; /* Las nuevas celdas se agregarán en columnas */
+}
+```
+
+### Uso de unidades fraccionales (`fr`)
+
+Las unidades disponibles son `px`, `%`, `em`, `rem`, pero también existe `fr` (unidad fraccional), que distribuye el espacio disponible.
+
+Ejemplo de un layout donde la columna del medio ocupa el doble de espacio que las otras:
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+}
+```
+
+---
+Este documento ahora está corregido y estructurado para facilitar el estudio de CSS Grid. ¿Te gustaría agregar algo más o necesitas más ejemplos? 😊

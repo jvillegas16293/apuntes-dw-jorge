@@ -35,7 +35,7 @@ let booleano = true; // boolean
 const PI = 3.1416;   // constante
 
 // Comparación de tipos primitivos
-let numero2 = "123"; // Es un string, no un número
+let numero = "123"; // Es un string, no un número
 numero2 = Number(numero2);  // Convertimos 'numero2' a un número
 console.log(numero2); // Imprime 123 como número
 

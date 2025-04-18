@@ -11,28 +11,43 @@ La sprmesas se vuelven difíciles de entender cuando se anidan por eso de desarr
 
 // Mismo código utilizand Async / Await agregamos async a la funcion y awair a los itens de dentro.
 
+a// Definimos una función asincrónica (async) para obtener datos de la API
 async function traerDatos() {
 
+    // Usamos try-catch para manejar errores en la función asincrónica
     try {
-        const reponse = await fetch("https://jsonplaceholder.typicode.com/users/1");
+        // Hacemos una solicitud GET a la API para obtener datos del usuario con ID 1
+        const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+
+        // Convertimos la respuesta a formato JSON
         const datos = await response.json();
 
+        // Imprimimos los datos completos en consola
         console.log(datos);
-        conmsole.log(datos[0]); // imprimir en consola datos del primer usuario
 
-        // Simulamos un segundo request, trayendo los post del primer usuario
+        // Intentamos imprimir los datos del primer usuario (en este caso, 'datos' es un array de un solo objeto)
+        // Aquí hay un error tipográfico: 'conmsole' debería ser 'console'
+        console.log(datos[0]); // Imprimir en consola datos del primer usuario
+
+        // Simulamos una segunda solicitud a la API para obtener los posts del primer usuario
         const responsePost = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${datos[0].id}`);
+
+        // Convertimos la respuesta de los posts a formato JSON
         const listaPost = await responsePost.json();
+
+        // Aquí puedes hacer algo con 'listaPost', como imprimirla o procesarla
+
     } catch (error) {
+        // Si ocurre algún error en el bloque try, lo capturamos y lo mostramos en consola
         console.log("tuvimos un error:", error);
     }
-
-
 }
 
-const traerDatos = async ()=> {
-    
+// Definimos una función asincrónica, pero no está haciendo nada por el momento
+const traerDatos = async () => {
+    // Aquí se puede añadir código si es necesario
 }
+
 
 ```
 

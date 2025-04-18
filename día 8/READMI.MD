@@ -8,11 +8,11 @@ Los formularios en HTML son fundamentales para la interacción entre los usuario
   <!-- Campos del formulario van aquí -->
 </form>
 
-action: indica a dónde se enviará la información cuando se envía el formulario.
+- action: indica a dónde se enviará la información cuando se envía el formulario.
 
-method: define el método de envío.
+- method: define el método de envío.
 
-get: la información se envía por la URL (visible).
+- get: la información se envía por la URL (visible).
 
 post: la información se envía de forma oculta (por el cuerpo de la petición).
 

@@ -42,11 +42,11 @@ tips para utilizarlas
 
 - Sonre escriben las reglas de css norales, per no pasee mayor especificidad, por lo tanto las media queries tiene que estar por debajo de las relgas que quieren reemplazar
 
-- debe tener el mismo selector, para que reemmplace la regla que deseamos. Como excepcion, podemos utilizar las reglas principales en vez de específicas. ej: backgroud para remeplazar el bacgruond color
+- debe tener el mismo selector, para que reemmplace la regla que deseamos. Como excepcion, podemos utilizar las reglas principales en vez de específicas. ej: background para remeplazar el bacgruond color
 
 - pensar bien los breakpoints
 
-- podemos utilizar un  2media para cada selcor o una solo para todos los selectores, recomendado una sola
+- podemos utilizar un  @media para cada selcor o una solo para todos los selectores, recomendado una sola
 
 - Mobile first: intentamos desarrollar siempre primero para mobil y luego para pantallas mas grandes, de esta manera nos aseguramos que se vea bien en dispositvos móbiles
 

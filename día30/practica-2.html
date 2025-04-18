@@ -41,7 +41,8 @@
         // que obtuvo el ordenador
         function seleccionDeIA (){
             const opciones =  ["piedra", "papel", "tijera"];
-            const num= Match.floor(Math.random()* opciones.length);
+            const num= Match.floor(Math.random()* opciones.length); //Math.random() es una función que devuelve un número pseudoaleatorio entre 0 (inclusive) y 1 (exclusivo). Es decir, genera un número decimal aleatorio en el rango de 0 a 1, pero nunca llegará a 1.
+            //Math.floor() es una función que toma un número como argumento y lo redondea hacia abajo al entero más cercano. En otras palabras, elimina cualquier parte decimal del número.
             return opciones[num];
         }
 

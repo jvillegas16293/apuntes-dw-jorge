@@ -52,10 +52,10 @@ prop    duration  timming-fuction    delay
 
 -  linear
 
-- aese-in
+- ease-in: La animación empieza lentamente y luego se acelera.
 
-- ease-out
+- ease-out: La animación empieza rápido y termina lentamente.
 
-- ease-in-out
+- ease-in-out: La animación empieza y termina lentamente, pero es rápida en el medio.
 
 - cubic-bezier(): tiempo personalizado. 
